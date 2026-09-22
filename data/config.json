@@ -1,0 +1,7 @@
+{
+ "whatsapp_casa": "",
+ "supabase_url": "https://rlrxeegnwjsmxwzoytiz.supabase.co",
+ "fn_estimar": "https://rlrxeegnwjsmxwzoytiz.supabase.co/functions/v1/estimar",
+ "fn_diagnostico": "https://rlrxeegnwjsmxwzoytiz.supabase.co/functions/v1/diagnostico",
+ "anon_key": "sb_publishable_9yEhwRIH_L2Vp1FJI0sxKg_6tMg-sOs"
+}

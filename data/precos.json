@@ -1,0 +1,12 @@
+{ "moeda": "BRL", "escada": [2497, 1900, 1597, 1447, 1397], "piso": 1397, "nota": "1º serviço R$ 2.497, depois cada serviço seguinte custa menos até o piso de R$ 1.397. A posição vale por pedido, na ordem escolhida; o mais caro vem primeiro.",
+  "servicos": [
+    { "id": 1, "nome": "Site cinematográfico", "entrega": "site com filme na rolagem, som, versão celular, formulário", "prova": "link no ar + gravação com som", "prazo": "7–10 dias úteis" },
+    { "id": 2, "nome": "Agente de marketplace", "entrega": "criação, migração e conferência de anúncios nas suas lojas", "prova": "anúncios no ar conferidos pela grade", "prazo": "7–14 dias úteis" },
+    { "id": 3, "nome": "Sistema sob medida", "entrega": "balcão, pedidos, estoque, relatórios", "prova": "sistema no ar com seus dados", "prazo": "7–14 dias úteis" },
+    { "id": 4, "nome": "Atendimento no WhatsApp", "entrega": "agente que responde, agenda e faz follow-up", "prova": "conversas reais registradas", "prazo": "7–14 dias úteis" },
+    { "id": 5, "nome": "Automação de rotina na tela", "entrega": "o Steve operando um programa seu, sem API", "prova": "gravação da execução + log", "prazo": "7–14 dias úteis" },
+    { "id": 6, "nome": "Conteúdo com IA", "entrega": "imagens, vídeos e criativos da sua marca", "prova": "arquivos aprovados por você", "prazo": "5–10 dias úteis" },
+    { "id": 7, "nome": "Cérebro da empresa", "entrega": "cursos, processos e documentos viram memória consultável", "prova": "buscas respondidas com fonte", "prazo": "7–14 dias úteis" },
+    { "id": 8, "nome": "Operação mensal", "entrega": "o Steve operando continuamente", "prova": "placar mensal", "prazo": "sob consulta", "fora_da_escada": true }
+  ]
+}

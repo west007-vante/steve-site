@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR" data-base="..">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Casos e cenários — STEVE</title>
+  <meta name="description" content="Cinco empresas, um operador. Cenários de negócio, casos reais e os sites feitos pelo Steve, abertos em prévia.">
+  <link rel="icon" href="../assets/S.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../site.css">
+  <style>
+    :root, .sw-root { --sw-bg: var(--chumbo); --sw-ink: var(--prata); --sw-ink-soft: var(--metal); --sw-accent: #7A2BFF; --sw-font-display: var(--display); --sw-font-body: var(--texto); }
+    .sw-root { background: var(--chumbo) !important; }
+    .sw-topbar, .sw-pt { display: none !important; }
+    .sw-copy__num { font-family: var(--mono) !important; color: var(--metal) !important; }
+    .sw-copy__eyebrow { font-family: var(--mono) !important; font-weight: 400 !important; letter-spacing: .22em !important; font-size: .7rem !important; color: var(--metal) !important; }
+    .sw-copy__title { font-weight: 400 !important; letter-spacing: -.03em !important; line-height: 1.02 !important; white-space: pre-line; font-size: clamp(1.8rem, 3.6vw, 3rem) !important; }
+    .sw-copy__body { color: var(--metal) !important; }
+    .sw-copy__tags li { font-family: var(--mono) !important; letter-spacing: .14em; font-size: .68rem !important; background: none !important; border: 0 !important; padding: 0 14px 0 0 !important; color: var(--prata) !important; text-transform: uppercase; border-radius: 0 !important; }
+    .sw-btn { border-radius: 2px !important; }
+    .sw-btn--primary { background: var(--roxo) !important; color: #fff !important; }
+    .sw-btn--ghost { color: var(--prata) !important; box-shadow: inset 0 0 0 1px rgba(228,229,232,.25); }
+    .sw-route__label { display: none !important; }
+    .sw-route__dot.is-active i { background: var(--prata) !important; box-shadow: none !important; }
+    .sw-hint { font-family: var(--mono); }
+    #depois { position: relative; z-index: 5; background: var(--chumbo); }
+    .abre { position: relative; z-index: 6; padding: 20vh var(--gutter) 8vh; background: transparent; }
+    .abre h1 { max-width: 12ch; }
+  </style>
+</head>
+<body>
+  <div id="top"></div>
+  <div id="world"></div>
+  <main id="depois">
+    <section class="sec" aria-labelledby="t1">
+      <div class="in">
+        <div class="grid">
+          <div class="c7"><span class="mono eyebrow">JÁ FEITO · CLIENTES ANONIMIZADOS ATÉ AUTORIZAÇÃO</span><h2 id="t1">O que já operamos.</h2></div>
+          <div class="c5"><span class="graf graf--prata" data-tag="tag-5" data-texto="O CÉREBRO NÃO SAI DE CASA" style="max-width:380px;margin-left:auto"></span></div>
+        </div>
+        <ul class="ed" style="margin-top:40px">
+          <li><span class="k">01</span><div><h3>Marketplace para cliente pagante.</h3><p>Criação, migração e conferência de anúncios pela tela do gerenciador, em Mercado Livre, Shopee, TikTok Shop e Temu. 50 anúncios aprovados no TikTok Shop na auditoria de 12/06/2026; agente com 401 testes verdes em 20/08/2026.</p></div></li>
+          <li><span class="k">02</span><div><h3>Sistema de balcão de uma distribuidora.</h3><p>Pedido, estoque e relatório no mesmo lugar. Pedido feito e entregue no mesmo dia, 31/08/2026, com segurança de dados provada por teste.</p></div></li>
+          <li><span class="k">03</span><div><h3>ERP com nota fiscal para varejo de Franca.</h3><p>Painel com emissão de NFC-e integrada, 22 tabelas, para uma loja da cidade.</p></div></li>
+          <li><span class="k">04</span><div><h3>Sites cinematográficos.</h3><p>Dois sites com filme na rolagem no ar em 22/09/2026. Estão abaixo, abertos em prévia.</p></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec sec--alt" aria-labelledby="t2" id="vitrine-sec">
+      <div class="in">
+        <span class="mono eyebrow">A VITRINE</span>
+        <h2 id="t2">Abra e role. Foi o Steve que fez.</h2>
+        <div id="vitrine"></div>
+      </div>
+    </section>
+
+    <section class="sec" aria-label="Próximo passo">
+      <div class="in grid">
+        <div class="c7"><h2>Qual dessas empresas é a sua?</h2><p class="lead" style="margin-top:16px">Onze perguntas e você sai com um diagnóstico de verdade, com serviço e preço.</p></div>
+        <div class="c5" style="align-self:end"><div class="ctas" style="margin:0"><a class="btn btn--roxo" href="../diagnostico/">Fazer o diagnóstico</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../vendor/scrub-engine.js"></script>
+  <script src="../vendor/sound-engine.js"></script>
+  <script src="../site.js"></script>
+  <script src="../vitrine.js"></script>
+  <script>
+    STEVE.header(); STEVE.footer();
+    const A = '../assets/';
+    // Plano B do §08 ⑨: sem os mergulhos e conectores, as 5 ilhas entram como stills com parallax e zoom pela rolagem (o motor faz isso sem clip).
+    const ILHAS = [
+      { id: 'ilha_1', label: 'Loja', eyebrow: 'CENÁRIO 01', title: 'A loja que vende\nem 4 marketplaces.', body: 'Anúncio criado, migrado e conferido pela tela.', tags: ['Anúncios', 'Migração', 'Estoque'] },
+      { id: 'ilha_2', label: 'Escritório', eyebrow: 'CENÁRIO 02', title: 'O escritório que atende\nsozinho de madrugada.', body: 'Atendimento, agenda e follow-up sem ninguém de plantão.', tags: ['WhatsApp', 'Agenda', 'Follow-up'] },
+      { id: 'ilha_3', label: 'Distribuidora', eyebrow: 'CENÁRIO 03', title: 'A distribuidora que\nlargou a planilha.', body: 'Pedido, estoque e nota no mesmo lugar, feito em dias.', tags: ['Balcão', 'Estoque', 'Nota'] },
+      { id: 'ilha_4', label: 'Criador', eyebrow: 'CENÁRIO 04', title: 'O criador que\npublica todo dia.', body: 'Imagem, vídeo e site feitos pela máquina, aprovados por você.', tags: ['Criativos', 'Vídeo', 'Site'] },
+      { id: 'ilha_5', label: 'Casa', eyebrow: 'CENÁRIO 05', title: 'A casa que\nvirou empresa.', body: 'Tudo que envolve uma tela e um processador pode ser operado.', tags: ['Rotina', 'Relatórios', 'Tudo que tem tela'], cta: { primary: { label: 'Fazer o diagnóstico', href: '../diagnostico/' }, secondary: { label: 'Ver a vitrine', href: '#vitrine-sec' } } },
+    ];
+    const snd = STEVE.sound(ILHAS.map((_, i) => ({ s: i, at: 0.12, fx: 'pop' })).concat(ILHAS.slice(1).map((_, i) => ({ s: i, at: 0.9, fx: 'whoosh' }))));
+    fetch(A + 'vid/ilhas.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null).then(v => {
+      v = v || {};
+      mountScrollWorld(document.getElementById('world'), {
+        hint: 'role para voar', diveScroll: 1.5, connScroll: 0.9, crossfade: 0.1, atmosphere: false, nav: false,
+        sections: ILHAS.map(s => Object.assign({ accent: '#7A2BFF', still: `${A}${s.id}.webp`, stillMobile: `${A}${s.id}-m.webp`, clip: v[s.id] ? A + 'vid/' + v[s.id] : null, clipMobile: v[s.id] ? A + 'vid/' + v[s.id].replace('.mp4', '-m.mp4') : null }, s)),
+        connectors: (v.conectores || []).map(c => c ? A + 'vid/' + c : null),
+        onFrame: (pr, y) => { STEVE.worldTail(pr); snd && snd.frame(pr, y); },
+      });
+      // título da página sobre o primeiro plano
+      const h = document.createElement('div'); h.className = 'abre'; h.innerHTML = '<div class="in"><span class="mono eyebrow">CASOS & CENÁRIOS</span><h1 data-decode>Cinco empresas. Um operador.</h1></div>';
+      document.getElementById('depois').prepend(h);
+      STEVE.decodeObserve(); STEVE.graffiti();
+    });
+    VITRINE.mount(document.getElementById('vitrine'));
+  </script>
+</body>
+</html>

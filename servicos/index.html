@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR" data-base="..">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Serviços e orçamento — STEVE</title>
+  <meta name="description" content="Escreva do seu jeito. A gente traduz em serviço e preço. Catálogo, estimador e a escada de preço decrescente.">
+  <link rel="icon" href="../assets/S.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../site.css">
+  <style>
+    .abre { padding-top: 22vh; }
+    .cat td:first-child { font-family: var(--mono); color: var(--metal); font-size: .8rem; width: 40px; }
+    .cat td.n { color: var(--prata); font-weight: 600; }
+    .est { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: start; }
+    .est__out { border-top: 1px solid rgba(228,229,232,.12); padding-top: 22px; min-height: 200px; }
+    .est__out ul { list-style: none; margin: 0; padding: 0; }
+    .est__out li { display: flex; justify-content: space-between; gap: 20px; padding: 14px 0; border-bottom: 1px solid rgba(228,229,232,.08); }
+    .est__out li b { font-weight: 600; }
+    .est__out li span { font-family: var(--mono); white-space: nowrap; }
+    .est__tot { display: flex; justify-content: space-between; margin-top: 18px; font-family: var(--mono); font-size: 1.3rem; }
+    .est__nota { color: var(--metal); font-size: .9rem; margin-top: 14px; }
+    .est__vazio { color: var(--metal); }
+    .cnt { font-family: var(--mono); font-size: .72rem; color: var(--metal); text-align: right; margin-top: 6px; }
+    @media (max-width: 860px) { .est { grid-template-columns: 1fr; } }
+    .escada { margin-top: 44px; }
+    .escada svg { width: 100%; height: auto; display: block; overflow: visible; }
+    .escada rect { fill: var(--superficie); }
+    .escada rect.first { fill: var(--roxo); }
+    .escada text { font-family: var(--mono); fill: var(--prata); font-size: 15px; }
+    .escada text.s { fill: var(--metal); font-size: 11px; letter-spacing: .14em; }
+    @media (max-width: 700px) { .escada text { font-size: 22px; } .escada text.s { font-size: 15px; } }
+    .faq details { border-top: 1px solid rgba(228,229,232,.1); padding: 20px 0; }
+    .faq details:last-child { border-bottom: 1px solid rgba(228,229,232,.1); }
+    .faq summary { cursor: pointer; font-weight: 600; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; }
+    .faq summary::after { content: "+"; font-family: var(--mono); color: var(--metal); }
+    .faq details[open] summary::after { content: "–"; }
+    .faq p { color: var(--metal); margin-top: 12px; max-width: 64ch; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="sec abre" aria-labelledby="t0">
+      <div class="in grid">
+        <div class="c8"><span class="mono eyebrow">SERVIÇOS & ORÇAMENTO</span><h1 id="t0" data-decode>Escreva do seu jeito. A gente traduz em serviço e preço.</h1></div>
+      </div>
+    </section>
+
+    <section class="sec sec--alt" aria-labelledby="t1" style="padding-top:64px">
+      <div class="in">
+        <span class="mono eyebrow">O CATÁLOGO · 8 SERVIÇOS</span>
+        <h2 id="t1">O que é, o que entrega, como provamos, em quanto tempo.</h2>
+        <table class="tb cat" style="margin-top:40px" aria-label="Catálogo de serviços">
+          <thead><tr><th>#</th><th>Serviço</th><th>Entrega</th><th>Prova de pronto</th><th class="num">Prazo</th></tr></thead>
+          <tbody id="cat"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="sec" aria-labelledby="t2" id="estimador">
+      <div class="in est">
+        <div>
+          <span class="mono eyebrow">ESCREVA O QUE VOCÊ QUER</span>
+          <h2 id="t2" style="font-size:clamp(1.6rem,3vw,2.6rem)">Do seu jeito, com as suas palavras.</h2>
+          <form id="f" novalidate>
+            <label class="field"><span>O que você precisa</span><textarea class="inp" id="txt" maxlength="600" rows="5" placeholder="ex.: quero um site bonito pra minha clínica com agendamento" required></textarea></label>
+            <div class="cnt"><span id="cnt">0</span>/600</div>
+            <p class="err" id="err" aria-live="polite"></p>
+            <div class="ctas" style="margin-top:14px"><button class="btn btn--prata" type="submit" id="go">Estimar</button></div>
+          </form>
+        </div>
+        <div class="est__out" id="out" aria-live="polite"><p class="est__vazio">A estimativa aparece aqui, com os serviços identificados e o preço pela escada.</p></div>
+      </div>
+    </section>
+
+    <section class="sec sec--alt" aria-labelledby="t3">
+      <div class="in">
+        <div class="grid">
+          <div class="c7"><span class="mono eyebrow">A ESCADA DE PREÇO</span><h2 id="t3">Quanto mais leva, menos paga por serviço.</h2></div>
+          <div class="c5"><span class="graf graf--prata" data-tag="tag-4" data-texto="SEM TOKEN, SEM DONO" style="max-width:360px;margin-left:auto"></span></div>
+        </div>
+        <div class="escada" id="escada"></div>
+        <p class="lead" style="margin-top:28px;max-width:none">A diferença entre degraus cai pela metade a cada degrau até o piso. A posição vale por pedido, na ordem que você escolher; o mais caro vem primeiro.</p>
+        <p class="mono lower" style="margin-top:20px">Infra inclusa (roda na nossa máquina) · 50% no aceite, 50% na entrega · nunca prometemos venda.</p>
+      </div>
+    </section>
+
+    <section class="sec faq" aria-labelledby="t4">
+      <div class="in grid">
+        <div class="c5"><span class="mono eyebrow">PERGUNTAS FREQUENTES</span><h2 id="t4">Antes de perguntar.</h2></div>
+        <div class="c7">
+          <details><summary>A estimativa é a proposta?</summary><p>Não. A estimativa é o preço pela escada para os serviços que o texto identificou. A proposta final sai depois do diagnóstico, com escopo fechado. Escopo grande sempre vem como "a partir de".</p></details>
+          <details><summary>Onde o Steve roda?</summary><p>Na nossa máquina, inclusa no preço. Se o serviço precisa entrar no seu computador (automação de rotina na tela), ele entra com a sua permissão e fica só lá.</p></details>
+          <details><summary>Vocês garantem venda?</summary><p>Não. Prometemos execução que você confere: link no ar, anúncios conferidos, gravação da rotina, log. Venda depende de oferta, preço e mercado.</p></details>
+          <details><summary>Como é o pagamento?</summary><p>50% no aceite, 50% na entrega. Cada entrega tem uma prova de pronto definida antes de começar.</p></details>
+          <details><summary>E a operação mensal?</summary><p>Fica fora da escada e é combinada por consulta, com placar mensal do que foi executado.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--alt" aria-label="Próximo passo">
+      <div class="in grid">
+        <div class="c7"><h2>Prefere responder a escrever?</h2><p class="lead" style="margin-top:16px">Onze perguntas e o resultado vem com serviço e preço.</p></div>
+        <div class="c5" style="align-self:end"><div class="ctas" style="margin:0"><a class="btn btn--roxo" href="../diagnostico/">Fazer o diagnóstico</a></div></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../vendor/sound-engine.js"></script>
+  <script src="../site.js"></script>
+  <script>
+    STEVE.header(); STEVE.footer(); STEVE.sound([], { gain: 0.035 }); STEVE.decodeObserve(); STEVE.graffiti();
+    const esc = STEVE.esc;
+    STEVE.json('precos.json').then(P => {
+      STEVE.setPrecos(P);
+      document.getElementById('cat').innerHTML = P.servicos.map(s => `<tr><td>${String(s.id).padStart(2, '0')}</td><td class="n">${esc(s.nome)}</td><td style="color:var(--metal)">${esc(s.entrega)}</td><td style="color:var(--metal)">${esc(s.prova)}</td><td class="num d">${esc(s.prazo)}</td></tr>`).join('');
+      const E = P.escada, n = E.length, W = 1000, H = 300, bw = W / n - 20, max = E[0];
+      const el = document.getElementById('escada');
+      el.innerHTML = `<svg viewBox="0 -10 ${W} ${H + 45}" role="img" aria-label="Escada: ${E.map(STEVE.brl).join(', ')}">${E.map((v, i) => { const h = 60 + (v / max) * 180; return `<g class="deg"><rect class="${i === 0 ? 'first' : ''}" x="${i * (W / n) + 10}" y="${H - h}" width="${bw}" height="${h}" rx="2"/><text x="${i * (W / n) + 10 + bw / 2}" y="${H - h - 14}" text-anchor="middle" data-decode>${STEVE.brl(v)}</text><text class="s" x="${i * (W / n) + 10 + bw / 2}" y="${H + 24}" text-anchor="middle">${i + 1}º SERVIÇO${i === n - 1 ? ' EM DIANTE' : ''}</text></g>`; }).join('')}</svg>`;
+      const gs = [...el.querySelectorAll('.deg')]; gs.forEach(g => { g.style.opacity = STEVE.REDUCE ? 1 : 0; g.style.transition = 'opacity .4s'; });
+      if (!STEVE.REDUCE) { let shown = 0; const run = () => { const b = el.getBoundingClientRect(); const pr = Math.min(1, Math.max(0, (innerHeight * 0.9 - b.top) / (innerHeight * 0.5))); const k = Math.floor(pr * n + 0.001); gs.forEach((g, i) => g.style.opacity = i < k ? 1 : 0); if (k > shown) { shown = k; STEVE.fire('thump'); } }; addEventListener('scroll', () => requestAnimationFrame(run), { passive: true }); run(); }
+    });
+    // estimador: texto do visitante é dado, nunca instrução; só é exibido escapado
+    const txt = document.getElementById('txt'), cnt = document.getElementById('cnt'), out = document.getElementById('out'), err = document.getElementById('err'), go = document.getElementById('go');
+    txt.addEventListener('input', () => cnt.textContent = txt.value.length);
+    document.getElementById('f').addEventListener('submit', async e => {
+      e.preventDefault(); err.textContent = '';
+      const t = txt.value.trim(); if (t.length < 10) { err.textContent = 'Escreve um pouco mais: pelo menos 10 letras.'; return; }
+      go.disabled = true; go.textContent = 'Estimando…'; out.innerHTML = '<p class="est__vazio">Lendo o pedido…</p>';
+      try {
+        const r = await STEVE.estimar(t);
+        if (!r.servicos.length) { out.innerHTML = `<p class="est__vazio">Não identificamos um serviço do catálogo nesse texto. Vamos entender melhor no diagnóstico.</p><div class="ctas"><a class="btn btn--roxo" href="../diagnostico/">Fazer o diagnóstico</a></div>`; }
+        else {
+          const grande = r.porte === 'grande';
+          out.innerHTML = `<span class="mono">ESTIMATIVA · ${grande ? 'ESCOPO GRANDE' : 'ESCOPO PADRÃO'}${r.via === 'palavras' ? ' · SIMPLIFICADA' : ''}</span>
+            <ul style="margin-top:14px">${r.servicos.map(s => `<li><b>${esc(s.nome)}</b><span>${s.preco ? (grande ? 'a partir de ' : '') + STEVE.brl(s.preco) : 'sob consulta'}</span></li>`).join('')}</ul>
+            <div class="est__tot"><span>Total${grande ? ' a partir de' : ''}</span><b data-decode>${STEVE.brl(r.total)}</b></div>
+            <p class="est__nota">${grande ? 'Escopo grande: proposta final no diagnóstico.' : 'Preço pela escada, na ordem acima. Proposta final depois do diagnóstico.'}${r.via === 'palavras' ? ' Estimativa simplificada.' : ''}</p>
+            <div class="ctas"><a class="btn btn--roxo" href="../diagnostico/">Fazer o diagnóstico</a></div>`;
+          STEVE.decodeObserve(out); STEVE.fire('sparkle');
+        }
+        STEVE.ss.set('steve.pedido', t);
+      } catch (e2) { out.innerHTML = '<p class="est__vazio">Não deu para estimar agora. Tente de novo ou vá direto ao diagnóstico.</p>'; }
+      go.disabled = false; go.textContent = 'Estimar';
+    });
+  </script>
+</body>
+</html>

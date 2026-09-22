@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR" data-base="..">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Documentação — STEVE</title>
+  <meta name="description" content="O que o Steve é tecnicamente, sem marketing: memória, System One, modelos, mãos e olhos, voz, Station, segurança, o que ele não faz.">
+  <link rel="icon" href="../assets/S.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../site.css">
+  <style>
+    .doc { display: grid; grid-template-columns: 240px 1fr; gap: 64px; padding-top: 18vh; }
+    .idx { position: sticky; top: 110px; align-self: start; font-family: var(--mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; }
+    .idx a { display: block; color: var(--metal); text-decoration: none; padding: 7px 0; }
+    .idx a.on, .idx a:hover { color: var(--prata); }
+    .d { padding: 48px 0; border-top: 1px solid rgba(228,229,232,.1); scroll-margin-top: 90px; }
+    .d h2 { font-size: clamp(1.5rem, 2.6vw, 2.2rem); }
+    .d p { color: var(--metal); max-width: 62ch; margin-top: 14px; }
+    .d .n { margin-top: 18px; font-family: var(--mono); color: var(--prata); font-size: .95rem; }
+    .d .lim { margin-top: 10px; font-family: var(--mono); font-size: .72rem; letter-spacing: .1em; color: var(--metal); }
+    .dg { margin: 24px 0 0; max-width: 640px; }
+    .dg svg { width: 100%; height: auto; display: block; overflow: visible; }
+    .dg path, .dg rect { fill: none; stroke: rgba(228,229,232,.4); stroke-width: 1.2; }
+    .dg rect.s { fill: var(--superficie); stroke: rgba(228,229,232,.3); }
+    .dg text { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; fill: var(--prata); }
+    .dg text.m { fill: var(--metal); }
+    dl.gl { margin: 0; } dl.gl dt { font-weight: 600; margin-top: 18px; } dl.gl dd { margin: 4px 0 0; color: var(--metal); max-width: 62ch; }
+    @media (max-width: 860px) { .doc { grid-template-columns: 1fr; gap: 24px; } .idx { position: static; display: flex; flex-wrap: wrap; gap: 4px 18px; } }
+  </style>
+</head>
+<body>
+  <main class="sec" style="padding-top:0">
+    <div class="in doc">
+      <nav class="idx" aria-label="Índice">
+        <a href="#visao">Visão geral</a><a href="#memoria">Memória</a><a href="#system-one">System One</a><a href="#consciente">Consciente</a><a href="#maos">Mãos e olhos</a><a href="#voz">Voz</a><a href="#station">Máquinas 24/7</a><a href="#escada">A escada de modelos</a><a href="#seguranca">Segurança e dados</a><a href="#nao-faz">O que o Steve NÃO faz</a><a href="#glossario">Glossário</a>
+      </nav>
+      <div>
+        <span class="mono eyebrow">DOCUMENTAÇÃO</span>
+        <h1 style="font-size:clamp(2rem,4.6vw,3.6rem)">O que o Steve é, tecnicamente.</h1>
+        <p class="lead" style="margin-top:20px">Manual, sem superlativo. Cada seção diz o que é, como funciona, o número medido e o limite de hoje.</p>
+
+        <section class="d" id="visao"><h2>Visão geral</h2>
+          <p>O Steve é um operador de negócio: agentes com memória, um reflexo que decide antes de chamar um modelo de linguagem, e mãos que usam a tela como uma pessoa usa. Roda em máquinas nossas, dedicadas, que não dormem. O volume roda localmente; só o que exige raciocínio pesado sobe para um modelo de nuvem, e mesmo assim sem dado do cliente que não precise ir.</p>
+          <div class="dg"><svg viewBox="0 0 640 200"><rect class="s" x="10" y="20" width="140" height="50"/><text x="80" y="50" text-anchor="middle">MEMÓRIA</text><rect class="s" x="250" y="20" width="140" height="50"/><text x="320" y="50" text-anchor="middle">REFLEXO</text><rect class="s" x="490" y="20" width="140" height="50"/><text x="560" y="50" text-anchor="middle">RACIOCÍNIO</text><path d="M150 45 H250"/><path d="M390 45 H490"/><rect class="s" x="250" y="130" width="140" height="50"/><text x="320" y="160" text-anchor="middle">MÃOS · OLHOS · VOZ</text><path d="M320 70 V130"/><text class="m" x="320" y="115" text-anchor="middle">AGE NA TELA</text></svg></div>
+          <p class="n">1ª tarefa fechada sem humano em 56,2 s · 17/09/2026</p><p class="lim">Limite: tarefas que pedem leitura longa ainda podem voltar como inconclusivas.</p></section>
+
+        <section class="d" id="memoria"><h2>Memória</h2>
+          <p>Tudo que a operação aprende vira memória consultável: notas, processos, playbooks e o estado de cada cliente. O Steve busca nisso antes de agir, em vez de pedir para um modelo adivinhar.</p>
+          <p class="n">368.858 pedaços indexados · busca em 153 ms · 31/08/2026</p><p class="lim">Limite: a busca completa, fora do núcleo, ainda leva mais de um segundo.</p></section>
+
+        <section class="d" id="system-one"><h2>System One</h2>
+          <p>Decisões de opção fechada não vão para o modelo de linguagem. Um reflexo treinado em decisões reais escolhe o óbvio em menos de um segundo e devolve uma confiança. Abaixo de um certo grau de confiança, a decisão sobe. Ação sensível nunca é autorizada pelo reflexo: passa por gente.</p>
+          <p class="n">95,7% de acerto na categoria de anúncio em 459 decisões reais · 21/09/2026</p><p class="lim">Limite: em outras frentes o placar ainda é baixo e está em enriquecimento.</p></section>
+
+        <section class="d" id="consciente"><h2>Consciente</h2>
+          <p>O modelo de linguagem entra só quando há o que pensar, e recebe o contexto já reduzido pela memória e pelo reflexo. Modelo local para o volume, modelo grande para o difícil.</p>
+          <p class="n">modelo local a 59,2 tokens/s · 17/09/2026</p><p class="lim">Limite: raciocínio longo ainda sobe para a nuvem.</p></section>
+
+        <section class="d" id="maos"><h2>Mãos e olhos</h2>
+          <p>As mãos clicam e digitam em qualquer programa, sem depender de API do fornecedor. Os olhos leem a tela. Funciona com modelo pequeno ou grande.</p>
+          <p class="n">clique 268 ms · leitura da tela 1,1 s · "calcula 12×12" por voz → 144 na tela em 21,8 s · 21/09/2026</p><p class="lim">Limite: exige permissão do sistema operacional em cada máquina.</p></section>
+
+        <section class="d" id="voz"><h2>Voz</h2>
+          <p>Transcrição local, palavra de ativação e resposta falada. Nada do que é dito sai da máquina.</p>
+          <p class="n">0,4 s por transcrição · 21/09/2026</p><p class="lim">Limite: voz em outros idiomas em preparação.</p></section>
+
+        <section class="d" id="station"><h2>Máquinas dedicadas, 24/7</h2>
+          <p>O Steve roda em máquinas nossas, dedicadas, que não dormem. O computador do cliente é cliente e pode desligar. Dado não passa por empresa não autorizada: o que é local fica local.</p>
+          <p class="n">em produção desde 17/09/2026</p><p class="lim">Limite: capacidade é finita; operação mensal é combinada por consulta.</p></section>
+
+        <section class="d" id="escada"><h2>A escada de modelos</h2>
+          <p>Local faz o volume, sem custo por token. O difícil sobe. O modelo pequeno fica confiável porque a memória e o reflexo tiram dele o que ele erraria; o grande fica barato porque só é chamado com contexto enxuto.</p>
+          <p class="n">tarefa fechada 100% local em 15 s · 18/09/2026</p><p class="lim">Limite: uma execução nunca promove uma rota; promoção exige série medida.</p></section>
+
+        <section class="d" id="seguranca"><h2>Segurança e dados</h2>
+          <p>O cérebro do Steve não sai de casa. Dado de cliente fica na máquina combinada. Conteúdo de formulário é tratado como dado, nunca como instrução. Ação sensível passa por gente. Não usamos dado de cliente para treinar modelo.</p>
+          <p class="n">dados do site: só o servidor escreve, ninguém anônimo lê</p><p class="lim">Limite: acesso de parceiros é dado à mão, um a um.</p></section>
+
+        <section class="d" id="nao-faz"><h2>O que o Steve NÃO faz</h2>
+          <ol class="ed" style="margin-top:18px">
+            <li><span class="k">01</span><div><p style="color:var(--prata)">Não promete venda.</p></div></li>
+            <li><span class="k">02</span><div><p style="color:var(--prata)">Não opera sem permissão do sistema operacional da máquina.</p></div></li>
+            <li><span class="k">03</span><div><p style="color:var(--prata)">Não leva o dado do cliente para fora da máquina combinada.</p></div></li>
+            <li><span class="k">04</span><div><p style="color:var(--prata)">Decisão sensível passa por gente.</p></div></li>
+            <li><span class="k">05</span><div><p style="color:var(--prata)">Não é código aberto. E não contamos a receita.</p></div></li>
+          </ol></section>
+
+        <section class="d" id="glossario"><h2>Glossário</h2>
+          <dl class="gl">
+            <dt>System One</dt><dd>A camada de reflexo: decide opção fechada antes de qualquer modelo de linguagem.</dd>
+            <dt>Computer use</dt><dd>Usar o computador pela tela: clicar, digitar e ler, sem API.</dd>
+            <dt>Prova de pronto</dt><dd>O que tem de existir, pela mesma porta que o cliente usa, para uma entrega contar como feita.</dd>
+            <dt>Escada de modelos</dt><dd>Local para o volume, nuvem para o difícil.</dd>
+          </dl></section>
+
+        <div class="ctas"><a class="btn btn--roxo" href="../diagnostico/">Fazer o diagnóstico</a><a class="btn btn--ghost" href="../provas/">Ver as provas</a></div>
+      </div>
+    </div>
+  </main>
+  <script src="../vendor/sound-engine.js"></script>
+  <script src="../site.js"></script>
+  <script>
+    STEVE.header(); STEVE.footer(); STEVE.sound([], { gain: 0.03 });
+    document.querySelectorAll('.d .n').forEach(n => n.setAttribute('data-decode', '')); STEVE.decodeObserve();
+    // diagramas desenhados na rolagem
+    const paths = [...document.querySelectorAll('.dg path, .dg rect')]; paths.forEach(p => { const L = p.getTotalLength ? p.getTotalLength() : 600; p.style.strokeDasharray = L; p.style.strokeDashoffset = STEVE.REDUCE ? 0 : L; p.style.transition = 'stroke-dashoffset 1.2s ease-out'; });
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('path, rect').forEach(p => p.style.strokeDashoffset = 0); io.unobserve(e.target); } }), { threshold: 0.4 });
+    document.querySelectorAll('.dg').forEach(d => io.observe(d));
+    // índice acompanha a seção visível
+    const links = [...document.querySelectorAll('.idx a')];
+    const io2 = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-40% 0px -50% 0px' });
+    document.querySelectorAll('.d').forEach(d => io2.observe(d));
+  </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+{
+ "atualizado": "2026-09-22",
+ "resumo": [
+  {
+   "id": "jev-categoria",
+   "tarefa": "Classificar categoria de anúncio (reflexo)",
+   "resultado": "95,7% de acerto",
+   "valor": "95,7",
+   "unidade": "%",
+   "amostra": "459 decisões reais de marketplace",
+   "data": "21/09/2026",
+   "fonte": "dossiê interno · 21/09/2026",
+   "metodo": "Reexecutamos decisões já tomadas na operação e comparamos a resposta do reflexo com o gabarito humano. Conta como acerto a categoria idêntica com confiança alta.",
+   "limite": "Nas outras frentes da mesma medição o placar é pior (entre 28% e 75%). Estamos enriquecendo."
+  },
+  {
+   "id": "voz-144",
+   "tarefa": "Computer use por voz (\"calcula 12×12\")",
+   "resultado": "144 na tela em 21,8 s",
+   "valor": "21,8",
+   "unidade": "s",
+   "amostra": "1 execução gravada",
+   "data": "21/09/2026",
+   "fonte": "dossiê interno · 21/09/2026",
+   "metodo": "Comando falado, transcrito localmente, decidido pelo reflexo e executado por clique na Calculadora do sistema. Conta como acerto o número certo visível na tela.",
+   "limite": "Uma execução, não uma amostra. Depende de permissão do sistema operacional."
+  },
+  {
+   "id": "harness-56",
+   "tarefa": "Tarefa do harness fechada sem humano",
+   "resultado": "56,2 s",
+   "valor": "56,2",
+   "unidade": "s",
+   "amostra": "1ª tarefa",
+   "data": "17/09/2026",
+   "fonte": "dossiê interno · 17/09/2026",
+   "metodo": "Tarefa entra na fila, um agente executa em ambiente isolado, um segundo agente revisa, QA aprova. Conta como fechada quando chega a \"done\" sem intervenção humana.",
+   "limite": "Primeira tarefa. Tarefas que pedem leitura longa ainda dão inconclusivo."
+  },
+  {
+   "id": "local-15",
+   "tarefa": "Tarefa fechada 100% local, sem nuvem",
+   "resultado": "15 s",
+   "valor": "15",
+   "unidade": "s",
+   "amostra": "1 tarefa",
+   "data": "18/09/2026",
+   "fonte": "dossiê interno · 18/09/2026",
+   "metodo": "Mesmo laço, com modelo local no lugar do de nuvem. Conta como fechada com artefato real e QA aprovado.",
+   "limite": "Tarefa simples. Raciocínio longo ainda sobe para a nuvem."
+  },
+  {
+   "id": "tokens-59",
+   "tarefa": "Modelo local na máquina da casa",
+   "resultado": "59,2 tokens/s, JSON válido",
+   "valor": "59,2",
+   "unidade": "tok/s",
+   "amostra": "modelo local de 30B",
+   "data": "17/09/2026",
+   "fonte": "dossiê interno · 17/09/2026",
+   "metodo": "Geração medida numa máquina nossa com prompt de operação real e saída estruturada conferida por parser.",
+   "limite": "Modelos maiores não cabem na mesma máquina."
+  },
+  {
+   "id": "memoria-153",
+   "tarefa": "Busca na memória da operação",
+   "resultado": "153 ms em 368.858 pedaços",
+   "valor": "153",
+   "unidade": "ms",
+   "amostra": "núcleo da memória",
+   "data": "31/08/2026",
+   "fonte": "dossiê interno · 31/08/2026",
+   "metodo": "Busca semântica sobre a memória da operação fatiada em pedaços. Tempo medido no núcleo.",
+   "limite": "Busca em tudo leva 1,7 s."
+  },
+  {
+   "id": "jev-09",
+   "tarefa": "Decisão do reflexo em nuvem",
+   "resultado": "~0,9 s, confiança 0,89",
+   "valor": "0,9",
+   "unidade": "s",
+   "amostra": "benchmark oficial",
+   "data": "22/09/2026",
+   "fonte": "dossiê interno · 22/09/2026",
+   "metodo": "Uma decisão de opção fechada no reflexo, com latência e confiança lidas da resposta.",
+   "limite": "Latência de nuvem; o reflexo local decide em menos de 0,1 ms quando já viu o caso."
+  }
+ ],
+ "falhas": [
+  "Em junho, o publicador de anúncios alucinou links. Corrigido com QA antes de publicar.",
+  "45 anúncios publicados sem SEO deram 0 venda. Aprendizado: execução sem estratégia não vende.",
+  "A execução por tela depende de permissão do sistema operacional em cada máquina.",
+  "QA-veredito do System One em 28%: estado pobre, em enriquecimento."
+ ]
+}

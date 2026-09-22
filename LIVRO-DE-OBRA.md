@@ -1,0 +1,1 @@
+- 10:3x · Dono reprovou Casos: os 5 clipes locais (Wan2.2 TI2V-5B no Mac, 832×448/49q/20 passos) derretem após o quadro 0 (prancha work/local/ilhas_todas.jpg). Meu portão P1 só pegava quadro preto e deixou passar lixo colorido: FALHA MINHA DE QA. Clipes retirados (work/local/reprovados/), Casos voltou a stills com parallax, publicado. Fábrica local NÃO serve para vídeo neste Mac.
