@@ -1,0 +1,10 @@
+{ "regras": [
+  { "servico": 2, "padrao": "an[uú]ncio|marketplace|shopee|mercado ?livre|tiktok ?shop|amazon|temu|shein|magalu|catálogo|catalogo|produtos? na|migrar|migra[çc][aã]o" },
+  { "servico": 1, "padrao": "\\bsite\\b|landing|p[aá]gina|portf[oó]lio|presen[çc]a online|institucional" },
+  { "servico": 4, "padrao": "whats|atendimento|atender|agendamento|agenda|follow|responder cliente|chat" },
+  { "servico": 3, "padrao": "sistema|planilha|pedido|estoque|balc[aã]o|erp|nota fiscal|financeiro|controle|cadastro" },
+  { "servico": 5, "padrao": "rotina|repetitiv|automa|programa que|clicar|digitar|tela|todo dia (lan[çc]o|fa[çc]o)" },
+  { "servico": 6, "padrao": "v[ií]deo|imagem|foto|criativo|post|instagram|reels|conte[uú]do|design|arte" },
+  { "servico": 7, "padrao": "curso|documento|processo|manual|treinamento|memória|memoria|base de conhecimento|onboarding" }
+ ],
+ "grande": "\\b([3-9]\\d{2,}|\\d{4,})\\b|todas as lojas|v[aá]rias lojas|franquia|filiais|toda a empresa|inteir[ao]" }

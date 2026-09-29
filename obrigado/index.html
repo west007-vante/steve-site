@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR" data-base="..">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Obrigado — STEVE</title>
+  <meta name="description" content="Seu diagnóstico chegou. O que acontece agora, em três passos.">
+  <!-- cab:ini (gerado por qa/montar.mjs; não editar à mão) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-2ZWbG7juo8e1HLBQNA3F1MO/ku5Ipr+/pz0IX2hQYB8='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0B0C0F">
+  <link rel="canonical" href="https://west007-vante.github.io/steve-site/obrigado/">
+  <meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="STEVE">
+  <meta property="og:title" content="Obrigado — STEVE"><meta property="og:description" content="Seu diagnóstico chegou. O que acontece agora, em três passos."><meta property="og:url" content="https://west007-vante.github.io/steve-site/obrigado/">
+  <meta property="og:image" content="https://west007-vante.github.io/steve-site/assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Logotipo do STEVE, Autonomous Operations">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preload" href="../fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="../fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- cab:fim -->
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="../site.css">
+  <style>.abre{padding-top:22vh}.sem .so-enviado{display:none}.com .so-vazio{display:none}</style>
+</head>
+<body>
+<main><section class="sec abre" aria-labelledby="t0"><div class="in grid">
+  <div class="c7">
+    <!-- chegou pelo diagnóstico desta sessão -->
+    <div class="so-enviado">
+      <span class="mono eyebrow">OBRIGADO</span><h1 id="t0" data-decode>Chegou. Agora é com a gente.</h1>
+      <ol class="ed" style="margin-top:44px">
+        <li><span class="k">01</span><div><h2 class="h3">Seu diagnóstico chegou para a equipe.</h2></div></li>
+        <li><span class="k">02</span><div><h2 class="h3">Em até 1 dia útil falamos com você no WhatsApp <span id="numMask" class="mono lower"></span>.</h2></div></li>
+        <li><span class="k">03</span><div><h2 class="h3">Se quiser adiantar, chame agora.</h2><div class="ctas" id="ctas"><a class="btn btn--ghost" href="../">Voltar ao início</a></div></div></li>
+      </ol>
+    </div>
+    <!-- abriu esta página sem ter enviado nada: não dizemos que chegou -->
+    <div class="so-vazio">
+      <span class="mono eyebrow">DIAGNÓSTICO</span><h1 id="t1">Nenhum diagnóstico foi enviado nesta sessão.</h1>
+      <p class="lead" style="margin-top:22px">São onze perguntas. No fim você vê onde a empresa perde tempo, o que o Steve faria primeiro e o preço pela escada.</p>
+      <div class="ctas"><a class="btn btn--roxo" href="../diagnostico/">Fazer o diagnóstico</a><a class="btn btn--ghost" href="../">Voltar ao início</a></div>
+    </div>
+  </div>
+  <div class="c5"><span class="graf graf--prata" data-tag="tag-1" data-texto="PROVA > PROMESSA" style="max-width:380px;margin-left:auto;margin-top:80px"></span></div>
+</div></section></main>
+<script src="../vendor/sound-engine.js"></script>
+<script src="../site.js"></script>
+<script>
+  STEVE.header(); STEVE.footer(); STEVE.sound([], { gain: 0.03 });
+  (function () {
+    const enviado = STEVE.ss.get('steve.diag.enviado') === '1';
+    document.body.classList.add(enviado ? 'com' : 'sem');
+    if (!enviado) return;
+    let R = {}; try { R = JSON.parse(STEVE.ss.get('steve.diag') || '{}'); } catch (e) { }
+    const d = String(R.whatsapp || '').replace(/\D/g, '');
+    // número mascarado: só DDD e os 4 últimos, para a pessoa conferir sem expor o número inteiro na tela
+    if (d.length >= 12) document.getElementById('numMask').textContent = `(${d.slice(2, 4)}) •••••-${d.slice(-4)}`;
+    const wa = STEVE.ss.get('steve.diag.wa');
+    if (wa && /^https:\/\/wa\.me\/\d+/.test(wa)) {
+      const a = document.createElement('a'); a.className = 'btn btn--roxo'; a.href = wa; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Falar agora no WhatsApp';
+      document.getElementById('ctas').prepend(a);
+    }
+  })();
+  STEVE.decodeObserve(); STEVE.graffiti();
+</script>
+</body>
+</html>

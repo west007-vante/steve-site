@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /obrigado/
+Sitemap: https://west007-vante.github.io/steve-site/sitemap.xml
