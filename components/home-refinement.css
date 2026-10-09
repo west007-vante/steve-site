@@ -4,3 +4,13 @@
 
 /* Keep 3D reveal edges inside the viewport on narrow screens. */
 html:has(#hero),body:has(#hero){overflow-x:clip}
+
+/* Lightweight original shader; no full-screen raymarch loop. */
+#neural-sculpture img{display:block;width:100%;height:100%;object-fit:contain;border-radius:16px}
+.steve-public .neural-team{border-radius:20px}.steve-public .memory-editorial .txt{border-radius:8px}.steve-public .maos .p,.steve-public .placar li{border-radius:4px}
+.steve-public .s-navbar{max-width:1200px;width:calc(100% - 40px)}.steve-public .s-nav-links{gap:19px}.steve-public .s-nav-links a{font-size:12px}
+@media(max-width:1100px){.steve-public .s-nav-links{display:none}.steve-public .s-menu{display:flex}.steve-public .s-navbar.menu-open .s-nav-links{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--surface,#15161b);padding:24px;border:1px solid #ffffff20;border-radius:18px}}
+.steve-public[data-theme=light] .neural-copy p,.steve-public[data-theme=light] .neural-copy small{color:#50515c}
+
+.steve-public #liquid-art{opacity:.45}.steve-public[data-theme=light] #liquid-art{opacity:.2}.steve-public[data-theme=light] .hero-copy h1,.steve-public[data-theme=light] .hero-copy p{ text-shadow:none}
+.steve-public[data-theme=light] .hero-copy h1 em{color:#7130ca}
