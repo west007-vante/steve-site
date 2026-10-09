@@ -21,8 +21,16 @@
     const h = document.createElement('header'); h.className = 'hd';
     h.innerHTML = `<a class="hd__logo" href="${BASE}/"><img src="${BASE}/assets/brand/steve-mark.svg" alt="" width="24" height="26">STEVE</a>
       <button class="hd__menu" type="button" aria-expanded="false" aria-controls="nav">MENU</button>
-      <nav class="hd__nav" id="nav" aria-label="Principal">${links.map(([r, t]) => `<a href="${BASE}/${r}/"${here.endsWith('/' + r) ? ' aria-current="page"' : ''}>${t}</a>`).join('')}</nav>`;
+      <nav class="hd__nav" id="nav" aria-label="Principal">${links.map(([r, t]) => `<a href="${BASE}/${r}/"${r === 'entrar' ? ' class="s-cta"' : ''}${here.endsWith('/' + r) ? ' aria-current="page"' : ''}>${t}</a>`).join('')}</nav>`;
     document.body.prepend(h);
+    if (!document.querySelector('#public-nav')) {
+      const sessionBase = new URL(`${BASE}/components/`, document.baseURI);
+      if (!document.querySelector('link[data-session-menu]')) {
+        const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = new URL('session-menu.css', sessionBase).href; css.dataset.sessionMenu = 'true'; document.head.append(css);
+      }
+      import(new URL('session-menu.js', sessionBase).href).then(module => module.mountSessionMenu(h.querySelector('.hd__nav'))).catch(() => {});
+    }
+
     if (main) { const sk = document.createElement('a'); sk.className = 'skip'; sk.href = '#' + main.id; sk.textContent = 'Pular para o conteúdo'; document.body.prepend(sk); }
     const b = h.querySelector('.hd__menu'), n = h.querySelector('.hd__nav');
     const setMenu = o => { n.classList.toggle('is-open', o); b.setAttribute('aria-expanded', o); b.textContent = o ? 'FECHAR' : 'MENU'; document.documentElement.style.overflow = o ? 'hidden' : ''; if (o) { const a = n.querySelector('a'); a && a.focus(); } };

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt-BR" data-base=".">
+<html lang="pt-BR" data-base="." data-intro-video="assets/steve-intro.mp4">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -14,7 +14,7 @@
   <meta property="og:title" content="STEVE — Sua empresa inteira cabe num computador"><meta property="og:description" content="O Steve é um operador de negócio. Lembra, decide, enxerga a tela, clica e prova o que fez. Nascidos em Franca-SP."><meta property="og:url" content="https://west007-vante.github.io/steve-site/">
   <meta property="og:image" content="https://west007-vante.github.io/steve-site/assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Logotipo do STEVE, Autonomous Operations">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/brand/steve-tile.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="icon" href="assets/brand/steve-favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
   <!-- cab:fim -->
   <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="components/reconstructed/components.css"><link rel="stylesheet" href="components/public-ui.css"><link rel="stylesheet" href="components/home-refinement.css">
@@ -91,7 +91,7 @@
     @media (max-width: 860px) { .placar { grid-template-columns: 1fr; } }
 
   </style>
-</head>
+<link rel="stylesheet" href="components/session-menu.css"><link rel="stylesheet" href="components/intro-video.css"></head>
 <body class="s-demo steve-public">
   <div id="top"></div>
   <div id="world" role="region" aria-label="Filme de abertura: o que o Steve é"></div>
@@ -99,7 +99,7 @@
   <div id="graf1" aria-hidden="true">não é <span class="risco" data-novo="OPERADOR">assistente</span></div>
 
 <header id="public-nav"></header>
-<section id="hero" class="liquid-hero"><div class="hero-stage"><div id="liquid-art" aria-hidden="true"></div><div class="hero-copy"><span class="mono">INTELIGÊNCIA PARA O SEU MUNDO.</span><h1>Menos rotina.<br>Mais <em>direção.</em></h1><p>Contexto, memória e especialistas conectados.<br> Uma nova forma de transformar intenção em trabalho.</p><div><a class="primary-link" href="diagnostico/">Conhecer minha operação ↗</a><a href="app/">Explorar o aplicativo →</a></div><span class="hero-scroll mono">ROLE PARA CONHECER ↓</span></div><div class="hero-arrival" aria-hidden="true"><span class="mono">CONTEXTO · ESPECIALISTAS · EXECUÇÃO</span><p>Uma visão maior.<br>Um próximo passo concreto.</p></div><div class="hero-progress" aria-hidden="true"><i></i></div></div></section>
+<section id="hero" class="liquid-hero"><div class="hero-stage"><div id="liquid-art" aria-hidden="true"></div><div class="hero-copy"><span class="mono">INTELIGÊNCIA PARA O SEU MUNDO.</span><h1>Menos rotina.<br>Mais <em>direção.</em></h1><p>Contexto, memória e especialistas conectados.<br> Uma nova forma de transformar intenção em trabalho.</p><div><a class="primary-link" href="diagnostico/">Conhecer minha operação ↗</a><a href="app/">Explorar o aplicativo →</a></div><button type="button" id="replay-intro" class="intro-replay">Rever abertura ↗</button><span class="hero-scroll mono">ROLE PARA CONHECER ↓</span></div><div class="hero-arrival" aria-hidden="true"><span class="mono">CONTEXTO · ESPECIALISTAS · EXECUÇÃO</span><p>Uma visão maior.<br>Um próximo passo concreto.</p></div><div class="hero-progress" aria-hidden="true"><i></i></div></div></section>
   <main id="atos">
 <section id="features" class="public-section"><div id="features-panel"></div></section><section id="neurons-orbit" aria-label="Neurônios do Steve"></section>
     <!-- ATO 2 · A REALIDADE DURA -->
@@ -329,5 +329,5 @@
 
     STEVE.graffiti();
   </script>
-<script src="components/public-ui.bundle.js" defer></script><script type="module" src="components/public-site.js"></script><script type="module" src="components/home-organic.js"></script><script type="module" src="components/neural-light.js"></script><script src="components/product-preview.js" defer></script></body>
+<script src="components/public-ui.bundle.js" defer></script><script type="module" src="components/public-site.js"></script><script type="module" src="components/home-organic.js"></script><script type="module" src="components/neural-light.js"></script><script src="components/product-preview.js" defer></script><script src="components/intro-video.js" defer></script></body>
 </html>

@@ -9,3 +9,6 @@
 .login-art blockquote{text-align:left;align-self:stretch;margin-left:20px;margin-right:20px}.auth-mac-scene{isolation:isolate;z-index:1;background:#000}.auth-mac-photo{mix-blend-mode:normal;position:relative;z-index:1}.auth-mac-screen{z-index:2}.login-art{background-color:#000}
 
 .auth-brand{display:flex;align-items:center;gap:10px}.auth-brand img{display:block;border-radius:8px}
+.auth-brand img{border-radius:0;background:none}
+
+.remember-login{display:flex!important;align-items:center;gap:10px;font-size:12px!important;color:var(--muted,#aaa);margin:15px 0!important}.remember-login input{width:16px!important;height:16px!important;min-height:0!important;margin:0!important;accent-color:#9475b7}
