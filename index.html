@@ -6,7 +6,7 @@
   <title>STEVE — Sua empresa inteira cabe num computador</title>
   <meta name="description" content="O Steve é um operador de negócio. Lembra, decide, enxerga a tela, clica e prova o que fez. Nascidos em Franca-SP.">
   <!-- cab:ini (gerado por qa/montar.mjs; não editar à mão) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-8EZOTwnAhCHEX2dj1qrik9J/CPUq6AcD0t7iRFS8dsc='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-OjtoFoHLcq5dFFJFmkLx6KJCQl3n5fgGGmFjVkpr9M8='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#0B0C0F">
   <link rel="canonical" href="https://west007-vante.github.io/steve-site/">
@@ -17,7 +17,7 @@
   <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
   <!-- cab:fim -->
-  <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="components/reconstructed/components.css"><link rel="stylesheet" href="components/public-ui.css">
+  <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="components/reconstructed/components.css"><link rel="stylesheet" href="components/public-ui.css"><link rel="stylesheet" href="components/home-refinement.css">
   <style>
     /* ---- ATO 1: o motor, na pele do Steve ---- */
     :root, .sw-root { --sw-bg: var(--chumbo); --sw-ink: var(--prata); --sw-ink-soft: var(--metal); --sw-accent: #7A2BFF; --sw-font-display: var(--display); --sw-font-body: var(--texto); }
@@ -90,22 +90,6 @@
     .placar .mono { display: block; margin-top: 10px; font-size: .68rem; }
     @media (max-width: 860px) { .placar { grid-template-columns: 1fr; } }
 
-    /* ATO 7: player próprio */
-    .furo { position: relative; margin-top: 40px; background: #000; aspect-ratio: 16/9; overflow: hidden; }
-    .furo video { width: 100%; height: 100%; display: block; }
-    .furo__play { position: absolute; inset: 0; display: grid; place-items: center; background: none; border: 0; cursor: pointer; color: var(--prata); font-family: var(--mono); letter-spacing: .24em; font-size: .8rem; }
-    .furo__play i { display: grid; place-items: center; width: 84px; height: 84px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(228,229,232,.5); margin-bottom: 14px; }
-    .furo__play i::after { content: ""; border-left: 18px solid var(--prata); border-top: 11px solid transparent; border-bottom: 11px solid transparent; margin-left: 4px; }
-    .furo.is-playing .furo__play { display: none; }
-
-    /* ATO 9: escada de preço */
-    .escada { margin-top: 44px; }
-    .escada svg { width: 100%; height: auto; display: block; overflow: visible; }
-    .escada rect { fill: var(--superficie); }
-    .escada rect.first { fill: var(--roxo); }
-    .escada text { font-family: var(--mono); fill: var(--prata); font-size: 15px; }
-    .escada text.s { fill: var(--metal); font-size: 11px; letter-spacing: .14em; }
-    @media (max-width: 700px) { .escada text { font-size: 22px; } .escada text.s { font-size: 15px; } }
   </style>
 </head>
 <body class="s-demo steve-public">
@@ -115,7 +99,7 @@
   <div id="graf1" aria-hidden="true">não é <span class="risco" data-novo="OPERADOR">assistente</span></div>
 
 <header id="public-nav"></header><div class="public-top"><a href="./" aria-label="Steve início">STEVE</a><a href="entrar/">Entrar ↗</a></div>
-<section id="hero" class="liquid-hero"><div class="hero-stage"><div id="liquid-art" aria-hidden="true"></div><div class="hero-copy"><span class="mono">SEUS AGENTES. SUA OPERAÇÃO.</span><h1>Menos rotina.<br>Mais <em>direção.</em></h1><p>Anúncios e atendimento, conectados às suas lojas.<br>O Steve executa. Você acompanha e decide.</p><div><a class="primary-link" href="diagnostico/">Conhecer minha operação ↗</a><a href="app/">Explorar o aplicativo →</a></div><span class="hero-scroll mono">ROLE PARA CONHECER ↓</span></div><div class="hero-arrival" aria-hidden="true"><span class="mono">CONTEXTO · ESPECIALISTAS · EXECUÇÃO</span><p>Uma operação.<br>Todos os fios conectados.</p></div><div class="hero-progress" aria-hidden="true"><i></i></div></div></section>
+<section id="hero" class="liquid-hero"><div class="hero-stage"><div id="liquid-art" aria-hidden="true"></div><div class="hero-copy"><span class="mono">INTELIGÊNCIA PARA O SEU MUNDO.</span><h1>Menos rotina.<br>Mais <em>direção.</em></h1><p>Contexto, memória e especialistas conectados.<br> Uma nova forma de transformar intenção em trabalho.</p><div><a class="primary-link" href="diagnostico/">Conhecer minha operação ↗</a><a href="app/">Explorar o aplicativo →</a></div><span class="hero-scroll mono">ROLE PARA CONHECER ↓</span></div><div class="hero-arrival" aria-hidden="true"><span class="mono">CONTEXTO · ESPECIALISTAS · EXECUÇÃO</span><p>Uma visão maior.<br>Um próximo passo concreto.</p></div><div class="hero-progress" aria-hidden="true"><i></i></div></div></section>
   <main id="atos">
 <section id="features" class="public-section"><div id="features-panel"></div></section><section id="neurons-orbit" aria-label="Neurônios do Steve"></section>
     <!-- ATO 2 · A REALIDADE DURA -->
@@ -141,14 +125,14 @@
 
     <!-- ATO 3 · A MENTE -->
     <section class="sec sec--alt" id="ato3" aria-labelledby="t3">
-      <div class="in mente">
-        <figure class="memory-visual" aria-labelledby="memory-caption"><svg viewBox="0 0 560 520" role="img" aria-label="Contexto compartilhado: conexões entre memória, reflexo e decisão"><defs><radialGradient id="memory-glow"><stop stop-color="#7a2bff" stop-opacity=".24"/><stop offset="1" stop-color="#7a2bff" stop-opacity="0"/></radialGradient><linearGradient id="memory-wire"><stop stop-color="#7a2bff"/><stop offset="1" stop-color="#c7b1ff"/></linearGradient></defs><circle cx="280" cy="260" r="240" fill="url(#memory-glow)"/><g class="memory-grid" stroke="#9da3ab" stroke-opacity=".12" fill="none"><circle cx="280" cy="260" r="90"/><circle cx="280" cy="260" r="155"/><circle cx="280" cy="260" r="220"/><path d="M60 260H500M280 40V480M124 104L436 416M124 416L436 104"/></g><g fill="none" stroke="url(#memory-wire)" stroke-width="1.4"><path class="memory-flow" d="M95 173Q192 148 280 260T465 347"/><path class="memory-flow" d="M135 385Q240 398 280 260T425 120"/><path class="memory-flow" d="M280 80Q390 160 280 260T280 440"/><path class="memory-flow" d="M76 280Q180 325 280 260T488 225"/></g><g fill="#d5c4ff" stroke="#7a2bff" stroke-width="2"><circle cx="95" cy="173" r="6"/><circle cx="465" cy="347" r="6"/><circle cx="135" cy="385" r="6"/><circle cx="425" cy="120" r="6"/><circle cx="280" cy="80" r="6"/><circle cx="280" cy="440" r="6"/><circle cx="76" cy="280" r="6"/><circle cx="488" cy="225" r="6"/></g><circle cx="280" cy="260" r="51" fill="#0b0c0f" stroke="#b58bff"/><text x="280" y="276" text-anchor="middle" fill="#e4e5e8" font-size="46" font-family="Archivo Black, sans-serif">S</text><g fill="#9da3ab" font-size="10" font-family="IBM Plex Mono, monospace" letter-spacing="2"><text x="58" y="153">CONTEXTO</text><text x="364" y="97">REFLEXO</text><text x="80" y="411">MEMÓRIA</text><text x="407" y="375">DECISÃO</text></g></svg><figcaption id="memory-caption"><span>CONTEXTO QUE VIRA AÇÃO.</span><span>STEVE / MEMÓRIA OPERACIONAL</span></figcaption></figure>
+      <div class="in mente memory-editorial">
+
         <div class="txt stack">
           <span class="mono eyebrow">03 · A MENTE</span>
-          <h2 id="t3" data-decode>Antes de pensar, ele já sabe.</h2>
-          <p class="lead" data-decode>Um reflexo treinado em decisões reais escolhe o óbvio em menos de um segundo. O modelo de linguagem só é chamado para o que exige raciocínio, com o contexto certo e nada além.</p>
-          <p class="mono" data-decode>459 decisões reais · 95,7% de acerto na categoria de anúncio · 21/09/2026</p>
-          <p class="lead" data-decode>E ele lembra: 368 mil pedaços de conhecimento da operação, achados em 153 milissegundos.</p>
+          <h2 id="t3">Antes de pensar, ele já sabe.</h2>
+          <p class="lead">Um reflexo treinado em decisões reais escolhe o óbvio em menos de um segundo. O modelo de linguagem só é chamado para o que exige raciocínio, com o contexto certo e nada além.</p>
+          <p class="mono">459 decisões reais · 95,7% de acerto na categoria de anúncio · 21/09/2026</p>
+          <p class="lead">E ele lembra: 368 mil pedaços de conhecimento da operação, achados em 153 milissegundos.</p>
         </div>
       </div>
     </section>
@@ -160,9 +144,9 @@
         <h2 id="t4">Ele usa o seu computador como você usa.</h2>
         <p class="lead" style="margin-top:22px">Sem esperar integração, sem API: clica, digita e confere pela tela, em qualquer programa.</p>
         <div class="maos">
-          <div class="p"><b data-decode>21,8 s</b><span class="mono">Voz → 144 na tela · 21/09/2026</span></div>
-          <div class="p"><b data-decode>268 ms</b><span class="mono">Clique por nome de elemento</span></div>
-          <div class="p"><b data-decode>1,1 s</b><span class="mono">Leitura da tela</span></div>
+          <div class="p"><b>21,8 s</b><span class="mono">Voz → 144 na tela · 21/09/2026</span></div>
+          <div class="p"><b>268 ms</b><span class="mono">Clique por nome de elemento</span></div>
+          <div class="p"><b>1,1 s</b><span class="mono">Leitura da tela</span></div>
         </div>
         <!-- PENDENTE (dono): trechos de tela gravada entram aqui quando as gravações forem aprovadas (cursor visível, planos de 4 a 8 s). A nota interna saiu da página pública em 29/09. -->
       </div>
@@ -208,40 +192,13 @@
     </section>
 
     <!-- ATO 7 · O FURO -->
-    <section class="sec sec--alt" id="ato7" aria-labelledby="t7">
-      <div class="in">
-        <span class="mono eyebrow">07 · O FILME</span>
-        <h2 id="t7">O FURO.</h2>
-        <p class="lead" style="margin-top:18px">Atravessar o que é fechado.</p>
-        <div class="furo" id="furo">
-          <video preload="none" poster="assets/ofuro-motion-poster.jpg" playsinline controls aria-label="O FURO, motion design do Steve, 40 segundos" width="1920" height="1080"><source src="assets/ofuro-motion.mp4" type="video/mp4"></video>
-          <button class="furo__play" aria-label="Assistir O FURO"><span><i></i>ASSISTIR · 40 S</span></button>
-        </div>
-      </div>
-    </section>
+
 
     <!-- ATO 8 · A VITRINE -->
-    <section class="sec" id="ato8" aria-labelledby="t8">
-      <div class="in">
-        <span class="mono eyebrow">08 · A VITRINE</span>
-        <h2 id="t8">Feito pelo Steve.</h2>
-        <p class="lead" style="margin-top:18px">Dois sites de demonstração no ar, abertos aqui mesmo. Role dentro deles.</p>
-        <div id="vitrine"></div>
-      </div>
-    </section>
+
 
     <!-- ATO 9 · A OFERTA -->
-    <section class="sec sec--alt" id="ato9" aria-labelledby="t9">
-      <div class="in">
-        <span class="mono eyebrow">09 · SERVIÇOS PERSONALIZADOS</span>
-        <h2 id="t9">Serviços personalizados, a partir de R$ 2.497.</h2>
-        <p class="lead" style="margin-top:18px">Projetos com escopo definido no diagnóstico. Esta tabela é de serviços personalizados; as assinaturas do aplicativo estão na seção de planos abaixo.</p>
-        <div class="escada" id="escada"></div>
-        <p class="lead" style="margin-top:28px">Infra inclusa: roda na nossa máquina.</p>
-        <div class="ctas"><a class="btn btn--roxo" href="diagnostico/">Fazer o diagnóstico</a></div>
-        <p class="mono" style="margin-top:34px">Nunca prometemos venda. Prometemos execução que você confere.</p>
-      </div>
-    </section>
+
 <section id="plans" class="public-section"><div class="section-intro"><span class="mono">CRESÇA NO SEU RITMO</span><h2>Um plano para a<br>sua operação.</h2><p>Contas, volume e escopo definidos antes de contratar.</p></div><div id="public-pricing"></div><p id="plan-status" role="status"></p></section>
 <section id="feedbacks" class="public-section"><div class="section-intro"><span class="mono">QUEM OPERA COM O STEVE</span><h2>Experiências reais.<br>Sem roteiro.</h2></div><div id="public-feedbacks"></div></section>
   </main><div id="beam-footer"></div>
@@ -249,7 +206,7 @@
   <script src="vendor/scrub-engine.js"></script>
   <script src="vendor/sound-engine.js"></script>
   <script src="site.js"></script>
-  <script src="vitrine.js"></script>
+
   <script>
     // Header and footer are mounted by the public component layer.
     const A = 'assets/';
@@ -366,32 +323,11 @@
     // ---- ATO 6: placar de data/provas.json ----
     STEVE.json('provas.json').then(p => {
       const ul = document.getElementById('placar');
-      ul.innerHTML = p.resumo.slice(0, 6).map(r => `<li><b data-decode>${STEVE.esc(r.resultado)}</b><p>${STEVE.esc(r.tarefa)}</p><span class="mono">${STEVE.esc(r.amostra)} · ${STEVE.esc(r.data)}</span></li>`).join('');
-      STEVE.decodeObserve(ul);
+      ul.innerHTML = p.resumo.slice(0, 6).map(r => `<li><b>${STEVE.esc(r.resultado)}</b><p>${STEVE.esc(r.tarefa)}</p><span class="mono">${STEVE.esc(r.amostra)} · ${STEVE.esc(r.data)}</span></li>`).join('');
+
     }).catch(() => { document.getElementById('placar').innerHTML = '<li><p>Placar indisponível agora. <a href="provas/">Ver as provas</a>.</p></li>'; });
 
-    // ---- ATO 7: player ----
-    (function () { const f = document.getElementById('furo'), v = f.querySelector('video'), b = f.querySelector('.furo__play');
-      b.addEventListener('click', () => { f.classList.add('is-playing'); v.muted = false; const pr = v.play(); if (pr && pr.catch) pr.catch(() => f.classList.remove('is-playing')); v.focus(); });
-      v.addEventListener('play', () => f.classList.add('is-playing')); })();
-
-    // ---- ATO 8: vitrine ----
-    VITRINE.mount(document.getElementById('vitrine'));
-
-    // ---- ATO 9: escada desenhada pela rolagem ----
-    STEVE.json('precos.json').then(p => {
-      STEVE.setPrecos(p);
-      const E = p.escada, n = E.length, W = 1000, H = 300, bw = W / n - 20, max = E[0];
-      const rects = E.map((v, i) => { const h = 60 + (v / max) * 180; return `<g class="deg" data-i="${i}"><rect class="${i === 0 ? 'first' : ''}" x="${i * (W / n) + 10}" y="${H - h}" width="${bw}" height="${h}" rx="2"/><text x="${i * (W / n) + 10 + bw / 2}" y="${H - h - 14}" text-anchor="middle">${STEVE.brl(v)}</text><text class="s" x="${i * (W / n) + 10 + bw / 2}" y="${H + 24}" text-anchor="middle">${i + 1}º SERVIÇO${i === n - 1 ? ' EM DIANTE' : ''}</text></g>`; }).join('');
-      const el = document.getElementById('escada'); el.innerHTML = `<svg viewBox="0 -10 ${W} ${H + 45}" role="img" aria-label="Escada de preço decrescente">${rects}</svg>`;
-      const gs = [...el.querySelectorAll('.deg')]; gs.forEach(g => { g.style.opacity = STEVE.REDUCE ? 1 : 0; g.style.transition = 'opacity .4s'; });
-      if (STEVE.REDUCE) return; let shown = 0;
-      const run = () => { const b = el.getBoundingClientRect(); const pr = Math.min(1, Math.max(0, (innerHeight * 0.9 - b.top) / (innerHeight * 0.5)));
-        const k = Math.floor(pr * n + 0.001); gs.forEach((g, i) => g.style.opacity = i < k ? 1 : 0); if (k > shown) { shown = k; STEVE.fire('thump'); } };
-      addEventListener('scroll', () => requestAnimationFrame(run), { passive: true }); run();
-    });
-
-    STEVE.decodeObserve(); STEVE.graffiti(); STEVE.riscos(); STEVE.parallax();
+    STEVE.graffiti();
   </script>
-<script src="components/public-ui.bundle.js" defer></script><script type="module" src="components/public-site.js"></script></body>
+<script src="components/public-ui.bundle.js" defer></script><script type="module" src="components/public-site.js"></script><script type="module" src="components/home-organic.js"></script></body>
 </html>
