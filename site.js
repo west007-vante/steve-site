@@ -15,7 +15,7 @@
   /* ---------- cabeçalho ---------- */
   function header() {
     const here = location.pathname.replace(/\/index\.html$/, '/').replace(/\/$/, '') || '/';
-    const links = [['manifesto', 'Quem somos'], ['provas', 'Provas'], ['casos', 'Casos'], ['servicos', 'Serviços'], ['docs', 'Docs'], ['diagnostico', 'Diagnóstico']];
+    const links = [['manifesto', 'Quem somos'], ['provas', 'Provas'], ['casos', 'Casos'], ['servicos', 'Serviços'], ['docs', 'Docs'], ['diagnostico', 'Diagnóstico'], ['entrar', 'Entrar']];
     const main = document.querySelector('main');
     if (main) { if (!main.id) main.id = 'conteudo'; main.setAttribute('tabindex', '-1'); }
     const h = document.createElement('header'); h.className = 'hd';
@@ -108,7 +108,7 @@
     ['.sw-copylayer', '.sw-route', '.sw-hint'].forEach(sel => { const e = document.querySelector(sel); if (e) { e.style.opacity = op; e.style.pointerEvents = op > 0 ? '' : 'none'; } });
     // 29/09: o motor liga pointer-events:auto na copy da última cena; mesmo invisível ela roubava o clique da página de baixo
     if (op < 0.05) document.querySelectorAll('.sw-copy, .sw-route__dot').forEach(c => { c.style.pointerEvents = 'none'; c.style.visibility = 'hidden'; });
-    else document.querySelectorAll('.sw-copy, .sw-route__dot').forEach(c => { c.style.visibility = ''; });
+    else document.querySelectorAll('.sw-copy, .sw-route__dot').forEach(c => { c.style.visibility = c.classList.contains('sw-copy') && Number(c.style.opacity) === 0 ? 'hidden' : ''; });
     extras.forEach(e => { if (e) e.style.opacity = Math.min(Number(e.dataset.op ?? 1), op); });
   }
 

@@ -23,9 +23,10 @@
     .hd { position: absolute; }
     .split { display: grid; grid-template-columns: 45% 55%; height: 100dvh; }
     .painel { position: relative; background: var(--chumbo-2); overflow: hidden; display: grid; grid-template-rows: 1fr auto; padding: 0 0 40px; }
-    .painel .retrato { position: absolute; inset: 0; aspect-ratio: auto; background: none; }
-    .painel .retrato img { inset: -6% 0 0 0; height: 112%; opacity: .55; object-position: 70% 20%; }
-    .painel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,16,19,.1), rgba(15,16,19,.92) 70%); }
+    .painel .arte-maos { position: absolute; inset: 0; aspect-ratio: auto; background: none; margin: 0; }
+    .painel .arte-maos img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; will-change: auto; }
+
+    .painel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,16,19,.38) 0%, rgba(15,16,19,0) 20%, rgba(15,16,19,0) 65%, rgba(15,16,19,.88) 100%); }
     .resumo { position: relative; z-index: 2; align-self: end; padding: 0 var(--gutter); font-family: var(--mono); font-size: .8rem; letter-spacing: .06em; color: var(--metal); line-height: 1.7; }
     .resumo b { color: var(--prata); font-weight: 500; display: block; }
     .resumo div { margin-top: 10px; border-top: 1px solid rgba(228,229,232,.1); padding-top: 8px; }
@@ -72,7 +73,7 @@
 <body>
   <div class="split">
     <aside class="painel" aria-label="Resumo das respostas">
-      <figure class="retrato"><img src="../assets/retrato.webp" alt="" loading="eager"></figure>
+      <figure class="arte-maos"><img src="../assets/diagnostico/adam-fundo-prolongado.png" alt="" loading="eager"></figure>
       <div class="prog" id="prog" aria-hidden="true"></div>
       <span class="graf graf--prata graf-painel" id="grafp" data-tag="tag-6" data-texto="MÃOS NA MÁQUINA"></span>
       <div class="resumo" id="resumo"><b>DIAGNÓSTICO</b><div>As suas respostas aparecem aqui.</div></div>

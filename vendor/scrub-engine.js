@@ -162,6 +162,7 @@ function mountScrollWorld(container, config) {
       (s.body ? `<p class="sw-copy__body">${esc(s.body)}</p>` : '') +
       (s.tags && s.tags.length ? `<ul class="sw-copy__tags">${s.tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul>` : '') +
       (s.cta ? `<div class="sw-copy__cta">${ctaBtns(s.cta)}</div>` : '');
+    c.inert = true; c.setAttribute("aria-hidden", "true");
     copylayer.appendChild(c); copies.push(c);
     // [casa 29/09] quem navega por teclado cai num botão da copy: a rolagem vai até a cena dele, senão o foco fica invisível
     c.addEventListener('focusin', () => { if (parseFloat(c.style.opacity || '0') < 0.5) jumpTo(i, true); });
@@ -263,7 +264,11 @@ function mountScrollWorld(container, config) {
       const c = copies[i];
       c.style.opacity = cop;
       c.style.transform = reduce ? 'none' : `translateY(${(0.5 - pr) * 4}vh)`;
-      c.style.pointerEvents = cop > 0.5 ? 'auto' : 'none';
+      const interactive = cop > 0.5;
+      c.inert = !interactive;
+      c.setAttribute('aria-hidden', String(!interactive));
+      c.style.visibility = cop > 0 ? 'visible' : 'hidden';
+      c.style.pointerEvents = interactive ? 'auto' : 'none';
     }
 
     // [padrão casa] gancho p/ camadas extras (HUD): progresso local de cada seção

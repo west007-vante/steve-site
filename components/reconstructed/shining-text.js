@@ -1,0 +1,1 @@
+export function mountShiningText(root,{text='Steve está raciocinando…',duration=2.5}={}){root.classList.add('s-shining');root.textContent=text;root.setAttribute('role','status');root.style.setProperty('--shine-duration',`${Math.max(.5,duration)}s`);return{setText(value){root.textContent=value},destroy(){root.replaceChildren()}}}

@@ -6,7 +6,7 @@
   <title>STEVE — Sua empresa inteira cabe num computador</title>
   <meta name="description" content="O Steve é um operador de negócio. Lembra, decide, enxerga a tela, clica e prova o que fez. Nascidos em Franca-SP.">
   <!-- cab:ini (gerado por qa/montar.mjs; não editar à mão) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-f2z2pH1EIYPTVAK9byc48fOFOiXdIUjl0LVYRZTsJzY='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-8EZOTwnAhCHEX2dj1qrik9J/CPUq6AcD0t7iRFS8dsc='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#0B0C0F">
   <link rel="canonical" href="https://west007-vante.github.io/steve-site/">
@@ -17,7 +17,7 @@
   <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
   <!-- cab:fim -->
-  <link rel="stylesheet" href="site.css">
+  <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="components/reconstructed/components.css"><link rel="stylesheet" href="components/public-ui.css">
   <style>
     /* ---- ATO 1: o motor, na pele do Steve ---- */
     :root, .sw-root { --sw-bg: var(--chumbo); --sw-ink: var(--prata); --sw-ink-soft: var(--metal); --sw-accent: #7A2BFF; --sw-font-display: var(--display); --sw-font-body: var(--texto); }
@@ -108,13 +108,16 @@
     @media (max-width: 700px) { .escada text { font-size: 22px; } .escada text.s { font-size: 15px; } }
   </style>
 </head>
-<body>
+<body class="s-demo steve-public">
   <div id="top"></div>
   <div id="world" role="region" aria-label="Filme de abertura: o que o Steve é"></div>
   <div id="hud" aria-hidden="true"></div>
   <div id="graf1" aria-hidden="true">não é <span class="risco" data-novo="OPERADOR">assistente</span></div>
 
+<header id="public-nav"></header><div class="public-top"><a href="./" aria-label="Steve início">STEVE</a><a href="entrar/">Entrar ↗</a></div>
+<section id="hero" class="liquid-hero"><div id="liquid-art" aria-hidden="true"></div><div class="hero-copy"><span class="mono">SEUS AGENTES. SUA OPERAÇÃO.</span><h1>Menos rotina.<br>Mais <em>direção.</em></h1><p>Anúncios e atendimento, conectados às suas lojas.<br>O Steve executa. Você acompanha e decide.</p><div><a class="primary-link" href="diagnostico/">Conhecer minha operação ↗</a><a href="app/">Explorar o aplicativo →</a></div><span class="hero-scroll mono">ROLE PARA CONHECER ↓</span></div></section>
   <main id="atos">
+<section id="features" class="public-section"><div id="features-panel"></div></section><section id="neurons-orbit" aria-label="Neurônios do Steve"></section>
     <!-- ATO 2 · A REALIDADE DURA -->
     <section class="sec" id="ato2" aria-labelledby="t2">
       <div class="in calc">
@@ -230,28 +233,29 @@
     <!-- ATO 9 · A OFERTA -->
     <section class="sec sec--alt" id="ato9" aria-labelledby="t9">
       <div class="in">
-        <span class="mono eyebrow">09 · A OFERTA</span>
-        <h2 id="t9">A partir de R$ 2.497 pelo primeiro serviço.</h2>
-        <p class="lead" style="margin-top:18px">Cada serviço seguinte custa menos.</p>
+        <span class="mono eyebrow">09 · SERVIÇOS PERSONALIZADOS</span>
+        <h2 id="t9">Serviços personalizados, a partir de R$ 2.497.</h2>
+        <p class="lead" style="margin-top:18px">Projetos com escopo definido no diagnóstico. Esta tabela é de serviços personalizados; as assinaturas do aplicativo estão na seção de planos abaixo.</p>
         <div class="escada" id="escada"></div>
         <p class="lead" style="margin-top:28px">Infra inclusa: roda na nossa máquina.</p>
         <div class="ctas"><a class="btn btn--roxo" href="diagnostico/">Fazer o diagnóstico</a></div>
         <p class="mono" style="margin-top:34px">Nunca prometemos venda. Prometemos execução que você confere.</p>
       </div>
     </section>
-  </main>
+<section id="plans" class="public-section"><div class="section-intro"><span class="mono">CRESÇA NO SEU RITMO</span><h2>Um plano para a<br>sua operação.</h2><p>Contas, volume e escopo definidos antes de contratar.</p></div><div id="public-pricing"></div><p id="plan-status" role="status"></p></section>
+<section id="feedbacks" class="public-section"><div class="section-intro"><span class="mono">QUEM OPERA COM O STEVE</span><h2>Experiências reais.<br>Sem roteiro.</h2></div><div id="public-feedbacks"></div></section>
+  </main><div id="beam-footer"></div>
 
   <script src="vendor/scrub-engine.js"></script>
   <script src="vendor/sound-engine.js"></script>
   <script src="site.js"></script>
   <script src="vitrine.js"></script>
   <script>
-    STEVE.header(); STEVE.footer();
+    // Header and footer are mounted by the public component layer.
     const A = 'assets/';
     const S = k => ({ still: `${A}${k}.webp`, stillMobile: `${A}${k}-m.webp`, clip: null, clipMobile: null });
     // Plano B do §05 ⑨: sem filme ainda, os 6 keyframes entram como pôsteres (o motor aceita seção sem clip). Quando os planos existirem, só preencher clip/clipMobile.
     const CLIPS = { k0: 'k0', k1: 'k1', k2: 'k2', k3: 'k3', k4: 'k4', k5: 'k5' };
-    fetch('assets/vid/planos.json', { cache: 'no-cache' }).then(r => r.ok ? r.json() : null).catch(() => null).then(planos => mount(planos || {}));
 
     // ---- HUD (quadro 1600×900, âncora à direita como o vídeo) ----
     const HUD = [
@@ -389,5 +393,5 @@
 
     STEVE.decodeObserve(); STEVE.graffiti(); STEVE.riscos(); STEVE.parallax();
   </script>
-</body>
+<script src="components/public-ui.bundle.js" defer></script><script type="module" src="components/public-site.js"></script></body>
 </html>

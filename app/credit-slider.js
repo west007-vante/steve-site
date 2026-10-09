@@ -1,0 +1,14 @@
+// DOM adaptation of shadcnspace slider-06 (exported Slider07).
+// Original geometry: mirror strength 3, pull threshold 6, arc bow 40, 40 track dots.
+// Provenance and original source: references/21st-20261008/PACOTE-STEVE/slider-06/.
+export function mountCreditSlider(root,{min=10,max=1000,step=10,value=100,onChange=()=>{}}={}){
+ root.className='slider-track';root.tabIndex=0;root.setAttribute('role','slider');root.setAttribute('aria-label','Valor desejado em reais');root.setAttribute('aria-valuemin',min);root.setAttribute('aria-valuemax',max);
+ const dots=document.createElement('div');dots.className='slider-dots';for(let i=0;i<40;i++)dots.append(document.createElement('i'));
+ const knob=document.createElement('span');knob.className='slider-knob';const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.classList.add('slider-arc');svg.setAttribute('aria-hidden','true');const path=document.createElementNS(svg.namespaceURI,'path');path.setAttribute('fill','none');path.setAttribute('stroke','currentColor');path.setAttribute('stroke-dasharray','3 3');svg.append(path);root.append(dots,svg,knob);
+ let active=false,anchor=0,target=value,dragged=false;const clamp=x=>Math.max(min,Math.min(max,Math.round(x/step)*step));const pct=v=>(v-min)/(max-min)*100;
+ function paint(v=value){root.setAttribute('aria-valuenow',v);root.setAttribute('aria-valuetext',`${v} reais`);knob.style.left=pct(v)+'%';knob.style.top='22px';[...dots.children].forEach((d,i)=>d.classList.toggle('on',i/40*100<pct(v)));onChange(v)}
+ root.onpointerdown=e=>{active=true;dragged=false;anchor=pct(value)/100*root.clientWidth;target=value;root.setPointerCapture(e.pointerId);root.classList.add('dragging')};
+ root.onpointermove=e=>{if(!active)return;const rect=root.getBoundingClientRect(),x=e.clientX-rect.left,y=e.clientY-rect.top,dx=x-anchor,dy=y-30;dragged=Math.hypot(dx,dy)>6;target=dragged?clamp(min+(anchor-dx*3)/rect.width*(max-min)):value;knob.style.left=x+'px';knob.style.top=(y-9)+'px';path.setAttribute('d',`M ${x} ${y} Q ${(x+pct(target)/100*rect.width)/2} ${Math.min(y,30)-40} ${pct(target)/100*rect.width} 30`);svg.style.opacity=dragged?'1':'0';root.setAttribute('aria-valuenow',target);onChange(target)};
+ function finish(){if(!active)return;active=false;value=target;root.classList.remove('dragging');svg.style.opacity='0';paint()}
+ root.onpointerup=finish;root.onpointercancel=()=>{target=value;finish()};root.onkeydown=e=>{let next=value;if(['ArrowRight','ArrowUp'].includes(e.key))next+=step;else if(['ArrowLeft','ArrowDown'].includes(e.key))next-=step;else if(e.key==='Home')next=min;else if(e.key==='End')next=max;else if(e.key==='PageUp')next+=step*10;else if(e.key==='PageDown')next-=step*10;else return;e.preventDefault();value=clamp(next);paint()};paint();return{destroy(){root.replaceChildren();root.onpointerdown=root.onpointermove=root.onpointerup=root.onpointercancel=root.onkeydown=null}};
+}
