@@ -6,3 +6,6 @@
 
 .login-art blockquote{order:-1;margin:20px 0 24px;max-width:580px}.login-art blockquote cite{display:block;font:11px var(--texto);color:#888;margin-top:18px;font-style:normal;letter-spacing:0}.auth-mac-scene{width:100%;position:relative}.auth-mac-photo{width:100%;max-width:none}.auth-mac-screen{position:absolute;left:14.67%;top:31.42%;width:70.5%;height:40.67%;object-fit:cover;object-position:top;border-radius:2px}.art-footnote{display:none}
 .auth-mac-photo{mix-blend-mode:screen}.auth-mac-scene{margin-top:-22px}.login-art blockquote{position:relative;z-index:2}
+.login-art blockquote{text-align:left;align-self:stretch;margin-left:20px;margin-right:20px}.auth-mac-scene{isolation:isolate;z-index:1;background:#000}.auth-mac-photo{mix-blend-mode:normal;position:relative;z-index:1}.auth-mac-screen{z-index:2}.login-art{background-color:#000}
+
+.auth-brand{display:flex;align-items:center;gap:10px}.auth-brand img{display:block;border-radius:8px}

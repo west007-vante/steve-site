@@ -6,7 +6,7 @@
   <title>Diagnóstico — STEVE</title>
   <meta name="description" content="Onze perguntas. Você sai com um diagnóstico de verdade: onde a empresa perde tempo, o que o Steve faria primeiro e o preço pela escada.">
   <!-- cab:ini (gerado por qa/montar.mjs; não editar à mão) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-bZOupnascLxIh3J0h1vhRtZYj/ilDSLJ20iHeDYSeDo='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-OD14ZR66LHt+XOeRBFelf+KCZt/oGS/0grhkSEzvYIE='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#0B0C0F">
   <link rel="canonical" href="https://west007-vante.github.io/steve-site/diagnostico/">
@@ -69,7 +69,7 @@
       .graf-painel { display: none; } .lado { padding: 24px var(--gutter) 40px; align-content: start; }
     }
   </style>
-</head>
+<link rel="stylesheet" href="../components/page-fade.css"></head>
 <body>
   <div class="split">
     <aside class="painel" aria-label="Resumo das respostas">
@@ -111,9 +111,9 @@
     prog.innerHTML = Q.map(() => '<i></i>').join('');
     const RES = { nome: 'Nome', empresa: 'Empresa', segmento: 'Faz', porte: 'Equipe', travas: 'Trava', programas: 'Usa', horas: 'Horas/sem', pedido: 'Primeiro', inicio: 'Começar', investimento: 'Investimento', whatsapp: 'WhatsApp' };
     function drawResumo() {
-      const rows = Q.filter(x => R[x.id] != null && R[x.id] !== '' && !(Array.isArray(R[x.id]) && !R[x.id].length)).map(x => `<div><span>${RES[x.id]}</span><b data-decode>${esc(Array.isArray(R[x.id]) ? R[x.id].join(' · ') : String(R[x.id]).slice(0, 80))}</b></div>`).join('');
+      const rows = Q.filter(x => R[x.id] != null && R[x.id] !== '' && !(Array.isArray(R[x.id]) && !R[x.id].length)).map(x => `<div><span>${RES[x.id]}</span><b>${esc(Array.isArray(R[x.id]) ? R[x.id].join(' · ') : String(R[x.id]).slice(0, 80))}</b></div>`).join('');
       resumo.innerHTML = `<b>DIAGNÓSTICO · ${i + 1}/${N}</b>${rows || '<div>As suas respostas aparecem aqui.</div>'}`;
-      STEVE.decodeObserve(resumo);
+
       [...prog.children].forEach((e, k) => { e.className = k < i ? 'on' : k === i ? 'cur' : ''; });
     }
     function op(x, k, o, checked, tipo) {
@@ -132,7 +132,7 @@
       inner += `<p class="err" id="err" aria-live="polite"></p><div class="nav">${i > 0 ? '<button class="btn btn--ghost" type="button" id="volta">Voltar</button>' : ''}<button class="btn ${i === N - 1 ? 'btn--roxo' : 'btn--prata'}" type="submit" id="vai">${i === N - 1 ? 'Ver meu diagnóstico' : 'Continuar'}</button><span class="dica">ENTER AVANÇA · ← VOLTA</span></div>`;
       const form = document.createElement('form'); form.noValidate = true; form.innerHTML = inner; form.className = STEVE.REDUCE ? '' : 'entra';
       q.innerHTML = ''; q.appendChild(form);
-      const h1 = form.querySelector('h1'); STEVE.decodeNow(h1);
+      const h1 = form.querySelector('h1');
       // foco: no desktop vai direto ao campo; no celular vai à pergunta (o leitor de tela anuncia a troca sem abrir o teclado)
       const first = form.querySelector('#in') || form.querySelector('input'); if (first && innerWidth > 860) first.focus(); else if (dir !== 'inicio') h1.focus({ preventScroll: true });
       form.addEventListener('submit', e => { e.preventDefault(); next(form); });
@@ -161,7 +161,7 @@
     // pontuação (§10)
     function score(r) { const u = { 'Esta semana': 40, 'Este mês': 25, 'Nos próximos 3 meses': 10, 'Só pesquisando': 0 }[r.inicio] || 0; const inv = { 'Acima de R$ 10.000': 30, 'R$ 5.000 a 10.000': 25, 'R$ 2.500 a 5.000': 20, 'Até R$ 2.500': 10, 'Prefiro ver a proposta': 15 }[r.investimento] || 0; const p = { 'Mais de 100': 20, '21–100': 18, '6–20': 15, '2–5': 10, 'Só eu': 5 }[r.porte] || 0; return u + inv + p + (r.horas >= 20 ? 10 : 5); }
     async function enviar() {
-      q.innerHTML = '<div class="res"><span class="mono n">ENVIANDO</span><h1 data-decode>Montando o seu diagnóstico.</h1></div>'; STEVE.decodeObserve(q);
+      q.innerHTML = '<div class="res"><span class="mono n">ENVIANDO</span><h1>Montando o seu diagnóstico.</h1></div>';
       let cfg = {}; try { cfg = await STEVE.json('config.json'); } catch (e) { }
       const origem = {}; try { new URL(location.href).searchParams.forEach((v, k) => { if (/^utm_/.test(k)) origem[k] = v.slice(0, 80); }); if (document.referrer) origem.referrer = document.referrer.slice(0, 200); } catch (e) { }
       const payload = { cliente_id: R.cliente_id, nome: R.nome, empresa: R.empresa, url: R.url || null, segmento: R.segmento === 'Outro' && R.segmento_outro ? 'Outro: ' + R.segmento_outro : R.segmento, porte: R.porte, travas: (R.travas || []).map(t => t === 'Outro' && R.travas_outro ? 'Outro: ' + R.travas_outro : t), programas: (R.programas || []).map(t => /Outro|qual/.test(t) && R.programas_outro ? t + ': ' + R.programas_outro : t), horas_semana: R.horas, valor_hora: R.valor_hora, pedido: R.pedido, inicio: R.inicio, investimento: R.investimento, whatsapp: R.whatsapp, email: R.email || null, consentimento: true, origem };
@@ -183,10 +183,10 @@
       const grande = res.porte === 'grande';
       q.innerHTML = `<div class="res">
         <span class="mono n">RESULTADO</span>
-        <h1 data-decode>${esc(R.nome)}, o seu diagnóstico.</h1>
+        <h1>${esc(R.nome)}, o seu diagnóstico.</h1>
         <div class="bl" style="margin-top:28px"><h2>Onde a ${esc(R.empresa)} perde tempo</h2>
           <p>${(R.travas || []).map(esc).join(' · ')}.</p>
-          <p style="margin-top:10px"><span class="num-g" data-decode>${H.toLocaleString('pt-BR')} horas por ano</span><br>${R.horas} h por semana em tarefa repetitiva de tela, 48 semanas úteis${val ? `. <span class="num-g" data-decode>${val}</span> por ano em clique repetido` : ''}.</p></div>
+          <p style="margin-top:10px"><span class="num-g">${H.toLocaleString('pt-BR')} horas por ano</span><br>${R.horas} h por semana em tarefa repetitiva de tela, 48 semanas úteis${val ? `. <span class="num-g">${val}</span> por ano em clique repetido` : ''}.</p></div>
         <div class="bl"><h2>O que o Steve faria primeiro</h2>
           ${res.servicos.length ? `<ul>${res.servicos.slice(0, 3).map(s => `<li><b style="color:var(--prata)">${esc(s.nome)}</b><span>${s.preco ? (grande ? 'a partir de ' : '') + STEVE.brl(s.preco) : 'sob consulta'}</span></li>`).join('')}</ul><p style="margin-top:10px">${grande ? 'Escopo grande: proposta final na conversa.' : 'Preço pela escada. Proposta final na conversa.'}</p>` : '<p>Vamos entender melhor na conversa: o pedido não bateu com um serviço do catálogo.</p>'}
           <p style="margin-top:10px;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em">"${esc(R.pedido)}"</p></div>
@@ -196,7 +196,7 @@
             <a class="btn btn--ghost hide" id="ck" href="#">Garantir o 1º serviço</a>
             ${falhou ? '<button class="btn btn--ghost" id="retry" type="button">Tentar de novo</button>' : `<a class="btn btn--ghost" href="../obrigado/">Receber no WhatsApp</a>`}</div></div>
       </div>`;
-      STEVE.decodeObserve(q); STEVE.fire('flare');
+       STEVE.fire('flare');
       document.getElementById('grafp').classList.add('show');
       const rt = document.getElementById('retry'); if (rt) rt.addEventListener('click', enviar);
       if (!falhou) { ss.set('steve.diag.enviado', '1'); ss.set('steve.diag.wa', waLink || ''); }

@@ -6,7 +6,7 @@
   <title>Provas — STEVE</title>
   <meta name="description" content="Benchmarks próprios, método aberto. Cada número tem tarefa, amostra, data e limite.">
   <!-- cab:ini (gerado por qa/montar.mjs; não editar à mão) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-adPGia52syBkaH3eD+frQF1nYN7RCWwZXqucc6Ib4CI='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-L2oOaVhG4H6pNKsYalBkwby8rk5F7JsSUGzBQXd+xxY='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#0B0C0F">
   <link rel="canonical" href="https://west007-vante.github.io/steve-site/provas/">
@@ -31,12 +31,12 @@
     .bm dd.lim { color: var(--metal); }
     @media (max-width: 860px) { .bm { grid-template-columns: 1fr; gap: 26px; } }
   </style>
-</head>
+<link rel="stylesheet" href="../components/page-fade.css"></head>
 <body>
   <main>
     <section class="sec abre" aria-labelledby="t0">
       <div class="in grid">
-        <div class="c8"><span class="mono eyebrow">PROVAS</span><h1 id="t0" data-decode>Benchmarks próprios. Método aberto.</h1>
+        <div class="c8"><span class="mono eyebrow">PROVAS</span><h1 id="t0">Benchmarks próprios. Método aberto.</h1>
           <p class="lead" style="margin-top:26px">Medimos o Steve em decisões e tarefas reais da operação, não em prova de laboratório. Cada número tem data; quando o teste for refeito, o número muda aqui.</p></div>
       </div>
     </section>
@@ -88,15 +88,15 @@
     STEVE.header(); STEVE.footer(); STEVE.sound([], { gain: 0.035 });
     const esc = STEVE.esc;
     STEVE.json('provas.json').then(P => {
-      document.querySelector('#resumo tbody').innerHTML = P.resumo.map(r => `<tr><td>${esc(r.tarefa)}</td><td class="r" data-decode>${esc(r.resultado)}</td><td style="color:var(--metal)">${esc(r.amostra)}</td><td class="num d">${esc(r.data)}</td></tr>`).join('');
+      document.querySelector('#resumo tbody').innerHTML = P.resumo.map(r => `<tr><td>${esc(r.tarefa)}</td><td class="r">${esc(r.resultado)}</td><td style="color:var(--metal)">${esc(r.amostra)}</td><td class="num d">${esc(r.data)}</td></tr>`).join('');
       // barra: proporção visual do resultado (só para dar corpo; o número é o que vale)
       const pct = r => r.unidade === '%' ? Number(r.valor.replace(',', '.')) : (r.unidade === 'tok/s' ? 59.2 / 80 * 100 : r.unidade === 'ms' ? 100 - 153 / 2000 * 100 : r.unidade === 's' ? Math.max(15, 100 - Number(r.valor.replace(',', '.')) * 1.4) : 60);
       document.getElementById('blocos').innerHTML = P.resumo.map(r => `<article class="bm" id="${esc(r.id)}">
-        <div><span class="mono">${esc(r.tarefa)}</span><p class="bm__res" data-decode style="margin-top:14px">${esc(r.resultado)}</p><div class="bm__bar" aria-hidden="true"><i data-w="${pct(r).toFixed(0)}"></i></div><span class="mono" style="display:block;margin-top:14px">${esc(r.amostra)} · ${esc(r.data)}</span></div>
+        <div><span class="mono">${esc(r.tarefa)}</span><p class="bm__res" style="margin-top:14px">${esc(r.resultado)}</p><div class="bm__bar" aria-hidden="true"><i data-w="${pct(r).toFixed(0)}"></i></div><span class="mono" style="display:block;margin-top:14px">${esc(r.amostra)} · ${esc(r.data)}</span></div>
         <dl><dt>Método</dt><dd>${esc(r.metodo)}</dd><dt>Limite</dt><dd class="lim">${esc(r.limite)}</dd><dt>Fonte</dt><dd class="lim mono lower" style="font-size:.72rem">${esc(r.fonte)}</dd></dl>
       </article>`).join('');
       document.getElementById('falhas').innerHTML = P.falhas.map((f, i) => `<li><span class="k">${String(i + 1).padStart(2, '0')}</span><div><p style="color:var(--prata)">${esc(f)}</p></div></li>`).join('');
-      STEVE.decodeObserve();
+
       const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { const i = e.target.querySelector('i'); i.style.width = i.dataset.w + '%'; io.unobserve(e.target); } }), { threshold: 0.4 });
       document.querySelectorAll('.bm__bar').forEach(b => io.observe(b));
       const io2 = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { STEVE.fire('ring'); io2.disconnect(); } }), { threshold: 0.3 });

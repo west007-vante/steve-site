@@ -19,7 +19,7 @@
     const main = document.querySelector('main');
     if (main) { if (!main.id) main.id = 'conteudo'; main.setAttribute('tabindex', '-1'); }
     const h = document.createElement('header'); h.className = 'hd';
-    h.innerHTML = `<a class="hd__logo" href="${BASE}/"><img src="${BASE}/assets/s-cromo.png" alt="" width="24" height="26">STEVE</a>
+    h.innerHTML = `<a class="hd__logo" href="${BASE}/"><img src="${BASE}/assets/brand/steve-mark.svg" alt="" width="24" height="26">STEVE</a>
       <button class="hd__menu" type="button" aria-expanded="false" aria-controls="nav">MENU</button>
       <nav class="hd__nav" id="nav" aria-label="Principal">${links.map(([r, t]) => `<a href="${BASE}/${r}/"${here.endsWith('/' + r) ? ' aria-current="page"' : ''}>${t}</a>`).join('')}</nav>`;
     document.body.prepend(h);

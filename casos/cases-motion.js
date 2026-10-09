@@ -1,0 +1,1 @@
+STEVE.header();STEVE.footer();const motionObserver=new IntersectionObserver(es=>es.forEach(e=>e.target.classList.toggle('in-view',e.isIntersecting)),{threshold:.15});document.querySelectorAll('.motion-case').forEach(e=>motionObserver.observe(e));

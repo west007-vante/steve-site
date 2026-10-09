@@ -6,7 +6,7 @@
   <title>Documentação — STEVE</title>
   <meta name="description" content="O que o Steve é tecnicamente, sem marketing: memória, System One, modelos, mãos e olhos, voz, Station, segurança, o que ele não faz.">
   <!-- cab:ini (gerado por qa/montar.mjs; não editar à mão) -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-ouue6CL9CUiChN8GnhzWojLDxRARlHMezgfOH5Q2wKM='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-SOvDKd2xz5oVsCbhDWKmh0y6Xpg2nW1fhuO7QUqfLvM='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#0B0C0F">
   <link rel="canonical" href="https://west007-vante.github.io/steve-site/docs/">
@@ -37,7 +37,7 @@
     dl.gl { margin: 0; } dl.gl dt { font-weight: 600; margin-top: 18px; } dl.gl dd { margin: 4px 0 0; color: var(--metal); max-width: 62ch; }
     @media (max-width: 860px) { .doc { grid-template-columns: 1fr; gap: 24px; } .idx { position: static; display: flex; flex-wrap: wrap; gap: 4px 18px; } }
   </style>
-</head>
+<link rel="stylesheet" href="../components/page-fade.css"></head>
 <body>
   <main class="sec" style="padding-top:0">
     <div class="in doc">
@@ -111,7 +111,7 @@
   <script src="../site.js"></script>
   <script>
     STEVE.header(); STEVE.footer(); STEVE.sound([], { gain: 0.03 });
-    document.querySelectorAll('.d .n').forEach(n => n.setAttribute('data-decode', '')); STEVE.decodeObserve();
+
     // diagramas desenhados na rolagem
     const paths = [...document.querySelectorAll('.dg path, .dg rect')]; paths.forEach(p => { const L = p.getTotalLength ? p.getTotalLength() : 600; p.style.strokeDasharray = L; p.style.strokeDashoffset = STEVE.REDUCE ? 0 : L; p.style.transition = 'stroke-dashoffset 1.2s ease-out'; });
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('path, rect').forEach(p => p.style.strokeDashoffset = 0); io.unobserve(e.target); } }), { threshold: 0.4 });
