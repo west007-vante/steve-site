@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Steve — planos (demo)</title>
+<!-- ?tema=app usa os tokens do app (fundo #0b0c0f, Instrument Sans); padrão usa os do site (Archivo Black). -->
+<link rel="stylesheet" href="../../site.css" id="css-site">
+<link rel="stylesheet" href="../../app/app.css" id="css-app" disabled>
+<link rel="stylesheet" href="./steve-pricing.css">
+<style>
+  .demo-out { max-width: 1280px; margin: 0 auto; padding: 8px 16px 48px; font: 12px/1.5 'IBM Plex Mono', monospace; color: #9DA3AB; }
+</style>
+</head>
+<body>
+<main id="planos"></main>
+<p class="demo-out" id="saida" role="status">onSelect: nenhum clique ainda</p>
+<script type="module">
+  import { mountStevePricing } from './steve-pricing.js';
+
+  const qs = new URLSearchParams(location.search);
+  if (qs.get('tema') === 'app') {
+    document.getElementById('css-site').disabled = true;
+    document.getElementById('css-app').disabled = false;
+    document.body.className = 's-demo';
+    document.body.dataset.theme = qs.get('claro') ? 'light' : 'dark';
+  }
+
+  // Decisões do dono de 15/10/2026. Valores em centavos.
+  const plans = [
+    { id: 'plano-1', name: 'Essencial', popular: false, monthlyAmount: 334700, annualAmount: 3347000, ads: 600,  maxStores: 3, chatConversations: 300,  credits: 6600 },
+    { id: 'plano-2', name: 'Profissional', popular: true,  monthlyAmount: 524700, annualAmount: 5247000, ads: 1500, maxStores: 6, chatConversations: 800,  credits: 16600 },
+    { id: 'plano-3', name: 'Escala', popular: false, monthlyAmount: 789700, annualAmount: 7897000, ads: 3150, maxStores: 9, chatConversations: null, credits: 33100 },
+  ];
+
+  window.pricing = mountStevePricing(document.getElementById('planos'), {
+    plans,
+    initialInterval: qs.get('periodo') === 'anual' ? 'year' : 'month',
+    onSelect: (planId, interval) => {
+      document.getElementById('saida').textContent = `onSelect('${planId}', '${interval}')`;
+    },
+  });
+</script>
+</body>
+</html>

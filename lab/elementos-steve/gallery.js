@@ -1,0 +1,15 @@
+import{mountNavbar}from'../../components/reconstructed/navbar-1.js';
+import{mountTabs}from'../../components/reconstructed/expandable-tabs.js';
+import{mountShiningText}from'../../components/reconstructed/shining-text.js';
+import{mountWorkspaces}from'../../components/reconstructed/workspaces.js';
+import{mountPricing}from'../../components/reconstructed/pricing-section.js';
+import{mountTestimonials}from'../../components/reconstructed/profile-card-testimonial-carousel.js';
+import{mountAIHero}from'../../components/reconstructed/ai-input-hero.js';
+const $=id=>document.getElementById(id);
+mountNavbar($('navbar'));mountAIHero($('aihero'));
+mountTabs($('tabs'),{onChange:item=>$('tab-state').textContent=`Área selecionada: ${item.label}.`});
+const shining=mountShiningText($('shining'));document.querySelectorAll('[data-state]').forEach(b=>b.onclick=()=>shining.setText(`Steve está ${b.dataset.state}…`));
+mountWorkspaces($('workspaces'),{items:[{id:'default',name:'Padrão Steve',description:'Servidor · demonstração',symbol:'S'},{id:'personal',name:'Conta pessoal',description:'Conexão pendente',symbol:'P'},{id:'local',name:'Modelo local',description:'Detecção pendente',symbol:'L'}],onChange:item=>$('model-state').textContent=`Escolha visual: ${item.name}. A disponibilidade real será verificada pelo servidor.`,onConfigure:()=>$('model-state').textContent='Configuração de provedores será conectada à área de conta.'});
+mountPricing($('pricing'),{plans:[{id:'starter',name:'Inicial',description:'Estrutura de um plano de entrada.',monthly:12,yearly:144,groups:[{title:'Escopo',items:['Publicação de anúncios','Atendimento de compradores']},{title:'Limites',items:['Lojas e créditos a definir']} ]},{id:'business',name:'Equipe',description:'Estrutura de um plano intermediário.',monthly:48,yearly:576,featured:true,groups:[{title:'Escopo',items:['Publicação de anúncios','Atendimento de compradores']},{title:'Limites',items:['Lojas e créditos a definir']}]},{id:'enterprise',name:'Operação',description:'Estrutura de um plano para múltiplas lojas.',monthly:96,yearly:1152,groups:[{title:'Escopo',items:['Publicação de anúncios','Atendimento de compradores']},{title:'Limites',items:['Lojas e créditos a definir']}]}],onChoose:p=>$('plan-state').textContent=`Seleção de demonstração: ${p.name}, ${p.billing==='yearly'?'anual':'mensal'}. Nenhuma cobrança foi iniciada.`});
+mountTestimonials($('testimonials'),{items:[{name:'Espaço de feedback 01',role:'Conteúdo de demonstração',quote:'Este cartão receberá a experiência de um cliente real, com nome, foto e autorização para publicação.'},{name:'Espaço de feedback 02',role:'Conteúdo de demonstração',quote:'As setas e o gesto de arrastar trocam o cartão. O botão abre o espaço reservado ao vídeo do cliente.'},{name:'Espaço de feedback 03',role:'Conteúdo de demonstração',quote:'A apresentação está pronta para receber os relatos. Nenhum resultado comercial é presumido nesta prévia.'}]});
+$('theme').onclick=()=>{const light=document.body.dataset.theme!=='light';document.body.dataset.theme=light?'light':'dark';$('theme').textContent=light?'Tema escuro':'Tema claro'};

@@ -1,0 +1,1030 @@
+STEVE — Componentes e bibliotecas de terceiros
+Fontes/adaptações do pacote 21st: referências de autoria e licenças abaixo. Sete módulos foram reconstruídos independentemente; não são fontes originais dos autores.
+
+
+auth-page/ORIGEM.json
+{
+  "name": "Auth Page",
+  "license": "",
+  "license_url": null,
+  "source_url": null,
+  "registry_url": "",
+  "website_url": "ui.efferd.com/auth#auth-2",
+  "dependencies": {
+    "lucide-react": "latest",
+    "framer-motion": "latest"
+  },
+  "direct_registry_dependencies": [
+    "shadcn/button",
+    "shadcn/input"
+  ],
+  "is_free_for_marketplace": false,
+  "copyright_notice": null,
+  "preview_url": "",
+  "url": "https://21st.dev/@efferd/components/auth-page",
+  "author": "efferd",
+  "slug": "auth-page",
+  "page_sha256": "6a9c1ca65d538fecbf10f2e0a48013353b2fe16201b8422f12ca57cf4fdebe94",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "Login: identidade Steve à esquerda, provedores/e-mail à direita.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/auth-page/auth-page.tsx",
+  "sha256": "84718087f9382782a72285ffeab2a5c5b373b277c49d5646e3ecbd882efcefa7",
+  "bytes": 7422,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+beam-wordmark-footer/ORIGEM.json
+{
+  "name": "Light Beam Footer with Giant Wordmark",
+  "license": "mit",
+  "license_url": null,
+  "source_url": null,
+  "registry_url": "",
+  "website_url": null,
+  "dependencies": {},
+  "direct_registry_dependencies": [],
+  "is_free_for_marketplace": false,
+  "copyright_notice": null,
+  "preview_url": "https://cdn.21st.dev/kedhareswer/beam-wordmark-footer/default/preview.1791041001478-9355cf30-4942-40a3-80dd-41e6a76236ef.png",
+  "url": "https://21st.dev/@kedhareswer/components/beam-wordmark-footer",
+  "author": "kedhareswer",
+  "slug": "beam-wordmark-footer",
+  "page_sha256": "ce710daa7ba4191a16fd65d4baf739501e46271145c4275bab4359b8e0e2582c",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "Rodapé: STEVE gigante, frase curta centralizada acima, prata/grafite/violeta.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/beam-wordmark-footer/beam-wordmark-footer.tsx",
+  "sha256": "19bd01cf8606347d97f6a864c3d3b40e9a763057393f1bc495c5c94ef7310f4e",
+  "bytes": 29701,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+features-with-panel/ORIGEM.json
+{
+  "name": "Features With Panel",
+  "license": "MIT",
+  "license_url": "https://scrollxui.dev/license",
+  "source_url": "https://www.scrollxui.dev/registry/features/features-with-panel.json",
+  "registry_url": "",
+  "website_url": "https://scrollxui.dev/docs/features/features-with-panel",
+  "dependencies": {
+    "motion": "latest"
+  },
+  "direct_registry_dependencies": [
+    "shadcn/card"
+  ],
+  "is_free_for_marketplace": false,
+  "copyright_notice": null,
+  "preview_url": "https://cdn.21st.dev/scrollxui/features-with-panel/default/preview.1790117760562-dfbab654-0cfb-47c3-ae53-b6865495c2f7.png",
+  "url": "https://21st.dev/@scrollxui/components/features-with-panel",
+  "author": "scrollxui",
+  "slug": "features-with-panel",
+  "page_sha256": "9458e791f66298ea82620212fd466c04adbdf77339e12deb08ffe61f431ac64d",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "Comunicados por versão: seleção revela demonstração e capacidades comprovadas.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/features-with-panel/features-with-panel.tsx",
+  "sha256": "f5583b79f261f05b91b4c4e1f54f80427e942f6a4eb6ab48e84dd748016b313d",
+  "bytes": 6142,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+group-chat/LICENSE
+MIT License
+
+Copyright (c) 2026 Alain
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+group-chat/ORIGEM.json
+{
+  "name": "Group Chat",
+  "license": "MIT",
+  "license_url": "https://github.com/Alain00/blobatar/blob/main/LICENSE",
+  "source_url": "https://blobatar.dev/r/group-chat.json",
+  "registry_url": "",
+  "website_url": "https://blobatar.dev",
+  "dependencies": {
+    "blobatar": "latest",
+    "@blobatar/react": "latest"
+  },
+  "direct_registry_dependencies": [],
+  "is_free_for_marketplace": false,
+  "copyright_notice": "Copyright (c) 2026 Alain",
+  "preview_url": "https://cdn.21st.dev/alain00/group-chat/default/preview.1790355175659-6ff6c637-ba9e-43f7-8e65-623329401dd9.png",
+  "url": "https://21st.dev/@alain00/components/group-chat",
+  "author": "alain00",
+  "slug": "group-chat",
+  "page_sha256": "dcda951268aa1f5ec85faf631127d5d606a2a57535a8d75f80b19babddd6713d",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "Detalhe do agente: equipe permanente/subagentes e eventos reais, com membros e funções navegáveis.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/group-chat/group-chat.tsx",
+  "sha256": "f425da1e4e4f03532961e0cd00ce2e50f444d33d40b28c96aa3bee94334ebf7d",
+  "bytes": 7709,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+ink-orbit-hero/ORIGEM.json
+{
+  "name": "SaaS Hero Section with 3D Sculpture",
+  "license": "mit",
+  "license_url": null,
+  "source_url": null,
+  "registry_url": "",
+  "website_url": null,
+  "dependencies": {},
+  "direct_registry_dependencies": [],
+  "is_free_for_marketplace": false,
+  "copyright_notice": null,
+  "preview_url": "https://cdn.21st.dev/kedhareswer/ink-orbit-hero/default/preview.1791279518933-f1d1a16e-ef07-4839-a30e-0bfaf229cde7.jpg",
+  "url": "https://21st.dev/@kedhareswer/components/ink-orbit-hero",
+  "author": "kedhareswer",
+  "slug": "ink-orbit-hero",
+  "page_sha256": "241506fa999dd1ec4c6b34451639e97963a7cfaa7cdade852fb5d0c3e9d57ce1",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "Neurônios: identidade Steve e CTA Ver feedbacks.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/ink-orbit-hero/ink-orbit-hero.tsx",
+  "sha256": "f8b4039e3be207f9f077bdd2aa7c075d5bf687192803a55c61ce3d1b35c3b793",
+  "bytes": 49424,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+liquid-metal-hero/ORIGEM.json
+{
+  "name": "Liquid Metal Hero",
+  "license": "",
+  "license_url": null,
+  "source_url": null,
+  "registry_url": null,
+  "website_url": null,
+  "dependencies": {
+    "framer-motion": "latest",
+    "@paper-design/shaders-react": "latest"
+  },
+  "direct_registry_dependencies": [
+    "shadcn/button",
+    "shadcn/badge",
+    "shadcn/card"
+  ],
+  "is_free_for_marketplace": null,
+  "copyright_notice": null,
+  "preview_url": null,
+  "url": "https://21st.dev/@chowlol202/components/liquid-metal-hero",
+  "author": "chowlol202",
+  "slug": "liquid-metal-hero",
+  "page_sha256": "5189c8ff5d9ee52539627a46972f09ddfefca503efc0f9f9addadce7931f1b46",
+  "code_chars": 0,
+  "source_status": "original_21st_authenticated_unlock",
+  "destination": "Abertura do site: shader ligado à rolagem, movimento reduzido e fallback.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/liquid-metal-hero/component.tsx",
+  "sha256": "7fd23c1ac9d6f2206e84df03f403dfc0d06fac65810e0a764ee7a4dc839f82eb",
+  "bytes": 5595,
+  "version_note": "Fonte TSX completa desbloqueada oficialmente na conta West Venda."
+}
+
+not-found-2/ORIGEM.json
+{
+  "name": "not found 2",
+  "license": "",
+  "license_url": null,
+  "source_url": null,
+  "registry_url": "",
+  "website_url": "https://efferd.com/blocks/not-found",
+  "dependencies": {
+    "lucide-react": "latest"
+  },
+  "direct_registry_dependencies": [
+    "shadcn/empty"
+  ],
+  "is_free_for_marketplace": false,
+  "copyright_notice": null,
+  "preview_url": "https://cdn.21st.dev/sshahaider/not-found-2/default/preview.1770406102409.png",
+  "url": "https://21st.dev/@efferd/components/not-found-2",
+  "author": "efferd",
+  "slug": "not-found-2",
+  "page_sha256": "58f9d44cc8b469094e469663b0e6520a643c829f85b78ee97465abb5da3de3fb",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "404 para rotas inexistentes. Busca sem resultado mantém a busca e mostra estado vazio, sem responder HTTP 404.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/not-found-2/not-found.tsx",
+  "sha256": "e95a4e62a975ac79c10e8e55d2691e1cc904682e9f2d35933412791fc262f459",
+  "bytes": 2776,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+otp-input/LICENSE
+MIT License
+
+Copyright (c) 2026 ozzy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+otp-input/ORIGEM.json
+{
+  "name": "OTP Input",
+  "license": "MIT",
+  "license_url": null,
+  "source_url": null,
+  "registry_url": "",
+  "website_url": "https://interior.dev/docs/otp-input",
+  "dependencies": {
+    "motion": "latest"
+  },
+  "direct_registry_dependencies": [],
+  "is_free_for_marketplace": false,
+  "copyright_notice": null,
+  "preview_url": "https://cdn.21st.dev/ddoemonn/otp-input/default/preview.1785473777969-dc36ac48-44b8-4fd6-bc72-4f24cb9d80cd.png",
+  "url": "https://21st.dev/@ddoemonn/components/otp-input",
+  "author": "ddoemonn",
+  "slug": "otp-input",
+  "page_sha256": "42a0c2b19ab71bef9382a232d364fa00bab9a5a442a401d7f6e92d5b5ea92da8",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "Segundo fator: entrada, colagem, teclado e estados; validação verdadeira vem do servidor.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/otp-input/otp-input.tsx",
+  "sha256": "d2408d2a02f9b940f1bc26f5fd9682947174c1a8982e97c484d8842d224ca832",
+  "bytes": 14014,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+password-strength/LICENSE
+MIT License
+
+Copyright (c) 2026 ozzy
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+password-strength/ORIGEM.json
+{
+  "name": "Password Strength",
+  "license": "MIT",
+  "license_url": null,
+  "source_url": null,
+  "registry_url": "",
+  "website_url": "https://interior.dev/docs/password-strength",
+  "dependencies": {
+    "motion": "latest"
+  },
+  "direct_registry_dependencies": [],
+  "is_free_for_marketplace": false,
+  "copyright_notice": null,
+  "preview_url": "https://cdn.21st.dev/ddoemonn/password-strength/default/preview.1785473762054-e047da03-12ac-4a4b-919f-d509448c8f77.png",
+  "url": "https://21st.dev/@ddoemonn/components/password-strength",
+  "author": "ddoemonn",
+  "slug": "password-strength",
+  "page_sha256": "e20f42bdf18b5525fd349e5fc6e8286a8ac054388872f8eba8a1550e8ff626d6",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "Cadastro e redefinição: força da senha com requisitos. Não aplicar critério novo à senha de login existente.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/password-strength/password-strength.tsx",
+  "sha256": "a11fdd0d36cbadd01ff0b153d51ecde30848f20b1732e45a346f6e75cb96d4d4",
+  "bytes": 8218,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+pricing-card/ORIGEM.json
+{
+  "name": "Pricing Card",
+  "license": "",
+  "license_url": null,
+  "source_url": null,
+  "registry_url": "",
+  "website_url": "ui.efferd.com/pricing#pricing-2",
+  "dependencies": {},
+  "direct_registry_dependencies": [
+    "shadcn/button"
+  ],
+  "is_free_for_marketplace": false,
+  "copyright_notice": null,
+  "preview_url": "https://cdn.21st.dev/sshahaider/pricing-card/default/preview.1754744357834.png",
+  "url": "https://21st.dev/@efferd/components/pricing-card",
+  "author": "efferd",
+  "slug": "pricing-card",
+  "page_sha256": "784acb6ccde73338c97dac28b5e1611768a12ec9e77ceaa57828ad650ac01785",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "Oferta: modal de primeiro login e faixa acima do menu, prazo UTC do servidor, sem reinício local.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/pricing-card/pricing-card.tsx",
+  "sha256": "6ae18e1a21657112a6e19edcfad688f04f2ce9440703f95be0ef8ad968f49f22",
+  "bytes": 4022,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+slider-06/LICENSE
+MIT License
+
+Copyright (c) 2026 Shadcn Space
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+slider-06/ORIGEM.json
+{
+  "name": "Price Range Slider",
+  "license": "MIT",
+  "license_url": "https://github.com/shadcnspace/shadcnspace/blob/main/LICENSE",
+  "source_url": "https://shadcnspace.com/r/slider-06.json",
+  "registry_url": "",
+  "website_url": "https://shadcnspace.com",
+  "dependencies": {
+    "lucide-react": "latest",
+    "@number-flow/react": "latest"
+  },
+  "direct_registry_dependencies": [
+    "shadcn/button",
+    "shadcn/slider"
+  ],
+  "is_free_for_marketplace": false,
+  "copyright_notice": null,
+  "preview_url": "https://cdn.21st.dev/shadcnspace/slider-06/default/preview.1788812402476-6b30a264-9044-412e-b881-e45e64b532d6.png",
+  "url": "https://21st.dev/@shadcnspace/components/slider-06",
+  "author": "shadcnspace",
+  "slug": "slider-06",
+  "page_sha256": "d067d050acb7ca39abf30ba820281fa6c56003500c1e6a4c762942ab7f7f20e4",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "Créditos: valor à esquerda, quantidade à direita; cotação e compra confirmadas no servidor.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/slider-06/slider-06.tsx",
+  "sha256": "0341c9ab78fcaa25fff1c8fd794989543a017d3ba99387fa135d228d4a5ac15d",
+  "bytes": 11333,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+theme-switcher-1/LICENSE
+MIT License
+
+Copyright (c) 2026 Chánh Đại
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+theme-switcher-1/ORIGEM.json
+{
+  "name": "Theme Switcher",
+  "license": "",
+  "license_url": null,
+  "source_url": null,
+  "registry_url": "",
+  "website_url": "https://chanhdai.com/components/theme-switcher-component",
+  "dependencies": {
+    "motion": "latest",
+    "next-themes": "latest",
+    "lucide-react": "latest"
+  },
+  "direct_registry_dependencies": [],
+  "is_free_for_marketplace": false,
+  "copyright_notice": null,
+  "preview_url": "https://cdn.21st.dev/larsen66/theme-switcher-1/default/preview.1756728825114.png",
+  "url": "https://21st.dev/@ncdai/components/theme-switcher-1",
+  "author": "ncdai",
+  "slug": "theme-switcher-1",
+  "page_sha256": "1f90986085e1156a1ea3e69ab3b2d3a31136da497d90413b77c2eb240dd9ccfc",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "Preferências: claro, escuro, sistema; tokens Steve nos dois temas.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/theme-switcher-1/theme-switcher.tsx",
+  "sha256": "227544f0a214796049a14008bd7359a8ba5a0bf87e706fced66502f87c0a3611",
+  "bytes": 2060,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+user-table/LICENSE
+MIT License
+
+Copyright (c) 2026 Alain
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+user-table/ORIGEM.json
+{
+  "name": "User Table",
+  "license": "MIT",
+  "license_url": "https://github.com/Alain00/blobatar/blob/main/LICENSE",
+  "source_url": "https://blobatar.dev/r/user-table.json",
+  "registry_url": "",
+  "website_url": "https://blobatar.dev",
+  "dependencies": {
+    "blobatar": "latest",
+    "@blobatar/react": "latest"
+  },
+  "direct_registry_dependencies": [],
+  "is_free_for_marketplace": false,
+  "copyright_notice": "Copyright (c) 2026 Alain",
+  "preview_url": "https://cdn.21st.dev/alain00/user-table/default/preview.1790355192654-c43d11d1-f23e-4934-a388-4bc0dbedbc06.png",
+  "url": "https://21st.dev/@alain00/components/user-table",
+  "author": "alain00",
+  "slug": "user-table",
+  "page_sha256": "ae90173b6af926ad6b20c27526df1b4098321384a644bb6ed583be874d693c90",
+  "code_chars": 0,
+  "source_status": "original_author_source_current_version",
+  "destination": "Agentes: XP abaixo do nome; abrir detalhes. Histórico de acertos/erros por ação e loja; aumento de autonomia exige autorização do cliente.",
+  "retrieved_source": true,
+  "source_file": "PACOTE-STEVE/user-table/user-table.tsx",
+  "sha256": "ae4e7e86c1510630a0df9286c1a8a1b976f70e3a83874f4ee72e7e053b3464d2",
+  "bytes": 6056,
+  "version_note": "Fonte integral do autor; correspondência exata com a revisão antiga do 21st ainda não comprovada."
+}
+
+react
+MIT License
+
+Copyright (c) Meta Platforms, Inc. and affiliates.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+react-dom
+MIT License
+
+Copyright (c) Meta Platforms, Inc. and affiliates.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+motion
+The MIT License (MIT)
+
+Copyright (c) 2024 [Motion](https://motion.dev) B.V.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+framer-motion
+The MIT License (MIT)
+
+Copyright (c) 2018 Framer B.V.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+@paper-design/shaders-react
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+
+@paper-design/shaders
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.

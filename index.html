@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="pt-BR" data-base="." data-intro-video="assets/steve-intro.mp4">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>STEVE — Sua empresa inteira cabe num computador</title>
+  <meta name="description" content="O Steve é um operador de negócio. Lembra, decide, enxerga a tela, clica e prova o que fez. Nascidos em Franca-SP.">
+  <!-- cab:ini (gerado por qa/montar.mjs; não editar à mão) -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-OjtoFoHLcq5dFFJFmkLx6KJCQl3n5fgGGmFjVkpr9M8='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; font-src 'self'; connect-src 'self' https://rlrxeegnwjsmxwzoytiz.supabase.co; frame-src 'self' https://west007-vante.github.io; object-src 'none'; base-uri 'self'; form-action 'self'; worker-src 'none'; manifest-src 'self'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0B0C0F">
+  <link rel="canonical" href="https://steveai.site/">
+  <meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="STEVE">
+  <meta property="og:title" content="STEVE — Sua empresa inteira cabe num computador"><meta property="og:description" content="O Steve é um operador de negócio. Lembra, decide, enxerga a tela, clica e prova o que fez. Nascidos em Franca-SP."><meta property="og:url" content="https://steveai.site/">
+  <meta property="og:image" content="https://steveai.site/assets/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Logotipo do STEVE, Autonomous Operations">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="fonts/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- cab:fim -->
+  <link rel="stylesheet" href="site.css"><link rel="stylesheet" href="components/reconstructed/components.css"><link rel="stylesheet" href="components/public-ui.css"><link rel="stylesheet" href="components/home-refinement.css">
+  <style>
+    /* ---- ATO 1: o motor, na pele do Steve ---- */
+    :root, .sw-root { --sw-bg: var(--chumbo); --sw-ink: var(--prata); --sw-ink-soft: var(--metal); --sw-accent: #7A2BFF; --sw-font-display: var(--display); --sw-font-body: var(--texto); }
+    .sw-root { background: var(--chumbo) !important; }
+    .sw-topbar, .sw-pt { display: none !important; }
+    .sw-copy__num { font-family: var(--mono) !important; color: var(--metal) !important; }
+    .sw-copy__eyebrow { font-family: var(--mono) !important; font-weight: 400 !important; letter-spacing: .22em !important; font-size: .7rem !important; color: var(--metal) !important; }
+    .sw-copy__title { font-weight: 400 !important; letter-spacing: -.03em !important; line-height: 1.02 !important; white-space: pre-line; }
+    .sw-copy__body { color: var(--metal) !important; }
+    .sw-btn { border-radius: 2px !important; }
+    .sw-btn--primary { background: var(--roxo) !important; color: #fff !important; }
+    .sw-btn--ghost { color: var(--prata) !important; box-shadow: inset 0 0 0 1px rgba(228,229,232,.25); }
+    .sw-route__label { display: none !important; }
+    .sw-route__dot.is-active i { background: var(--prata) !important; box-shadow: none !important; }
+    .sw-hint { font-family: var(--mono); }
+    @media (min-width: 861px) { .sw-scene__video, .sw-scene__still { object-position: 100% 45% !important; } }
+    /* 29/09: a copy ancorava o topo no meio da tela e os botões da 1ª cena caíam na borda de baixo (863 px de 900); agora ancora pela base */
+    @media (min-width: 861px) { .sw-copy { top: auto !important; bottom: clamp(56px, 9vh, 96px); } }
+    /* HUD: mesma caixa do vídeo (object-fit cover, âncora 100% 45%) */
+    #hud { position: fixed; inset: 0; z-index: 140; pointer-events: none; }
+    #hud svg { position: absolute; }
+    #hud .ring { fill: none; stroke: rgba(228,229,232,.5); stroke-width: 1; }
+    #hud .lead { fill: none; stroke: rgba(228,229,232,.5); stroke-width: .8; }
+    #hud .dot { fill: var(--prata); }
+    #hud text { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; fill: rgba(228,229,232,.78); }
+    @media (max-width: 860px) { #hud text, #hud .lead, #hud .dot { display: none; } }
+    /* grafite do ato 1 (correção assistente → OPERADOR), preso ao plano 1 */
+    #graf1 { position: fixed; left: clamp(18px, 5vw, 64px); top: calc(50% + 150px); z-index: 141; pointer-events: none; opacity: 0; font-family: var(--texto); font-size: clamp(1rem, 1.4vw, 1.2rem); color: var(--metal); }
+    @media (max-width: 860px) { #graf1 { display: none; } }
+    /* fim do motor: a página normal começa */
+    #atos { position: relative; z-index: 15; background: var(--chumbo); } /* acima do palco do filme (z 10): a última cena fica parada atrás e a página cobre por cima */
+
+    /* ATO 2 */
+    .calc { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .calc__out { font-family: var(--mono); font-size: clamp(1.4rem, 2.6vw, 2.4rem); line-height: 1.35; letter-spacing: -.01em; }
+    .calc__out b { color: var(--prata); font-weight: 500; }
+    .calc__out span { color: var(--metal); }
+    .calc output { display: block; }
+    .calc .val { font-family: var(--mono); color: var(--prata); font-size: 1.1rem; margin-left: 10px; }
+    @media (max-width: 860px) { .calc { grid-template-columns: 1fr; } }
+
+    /* ATO 3 */
+    .mente { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .mente .retrato { grid-column: 2; grid-row: 1; }
+    .mente .txt { grid-column: 1; grid-row: 1; }
+    @media (max-width: 860px) { .mente { grid-template-columns: 1fr; } .mente .retrato, .mente .txt { grid-column: 1; grid-row: auto; } .mente .retrato { order: -1; max-width: 70%; } }
+
+    /* ATO 4 */
+    .maos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+    .maos .p { padding: 28px 0 0; border-top: 1px solid rgba(228,229,232,.12); }
+    .maos .p b { display: block; font-family: var(--mono); font-weight: 500; font-size: clamp(1.6rem, 3vw, 2.6rem); color: var(--prata); letter-spacing: -.02em; }
+    .maos .p > span { display: block; margin-top: 8px; } /* só o rótulo: a regra antiga pegava os caracteres do decode e empilhava o número na vertical */
+    @media (max-width: 700px) { .maos { grid-template-columns: 1fr; } }
+
+    /* ATO 5: diagrama desenhado pela rolagem */
+    .esc { margin-top: 48px; }
+    .esc svg { width: 100%; height: auto; display: block; overflow: visible; }
+    .esc .l { fill: none; stroke: rgba(228,229,232,.35); stroke-width: 1.2; }
+    .esc .n { fill: var(--superficie); stroke: rgba(228,229,232,.25); stroke-width: 1; }
+    .esc .n.on { stroke: var(--prata); }
+    .esc .n.roxo.on { fill: var(--roxo); stroke: var(--roxo); }
+    .esc text { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; fill: var(--metal); }
+    .esc text.t { fill: var(--prata); font-size: 13px; }
+
+    /* ATO 6: placar */
+    .placar { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 40px; }
+    .placar li { padding: 26px 0; border-top: 1px solid rgba(228,229,232,.1); }
+    .placar b { display: block; font-family: var(--mono); font-weight: 500; font-size: clamp(1.8rem, 3.4vw, 3rem); color: var(--prata); letter-spacing: -.02em; line-height: 1.1; }
+    .placar p { color: var(--metal); margin-top: 8px; font-size: .98rem; }
+    .placar .mono { display: block; margin-top: 10px; font-size: .68rem; }
+    @media (max-width: 860px) { .placar { grid-template-columns: 1fr; } }
+
+  </style>
+<link rel="stylesheet" href="components/session-menu.css"><link rel="stylesheet" href="components/intro-video.css"></head>
+<body class="s-demo steve-public">
+  <div id="top"></div>
+  <div id="world" role="region" aria-label="Filme de abertura: o que o Steve é"></div>
+  <div id="hud" aria-hidden="true"></div>
+  <div id="graf1" aria-hidden="true">não é <span class="risco" data-novo="OPERADOR">assistente</span></div>
+
+<header id="public-nav"></header>
+<section id="hero" class="liquid-hero"><div class="hero-stage"><div id="liquid-art" aria-hidden="true"></div><div class="hero-copy"><span class="mono">INTELIGÊNCIA PARA O SEU MUNDO.</span><h1>Menos rotina.<br>Mais <em>direção.</em></h1><p>Contexto, memória e especialistas conectados.<br> Uma nova forma de transformar intenção em trabalho.</p><div><a class="primary-link" href="diagnostico/">Conhecer minha operação ↗</a><a href="app/">Explorar o aplicativo →</a></div><button type="button" id="replay-intro" class="intro-replay">Rever abertura ↗</button><span class="hero-scroll mono">ROLE PARA CONHECER ↓</span></div><div class="hero-arrival" aria-hidden="true"><span class="mono">CONTEXTO · ESPECIALISTAS · EXECUÇÃO</span><p>Uma visão maior.<br>Um próximo passo concreto.</p></div><div class="hero-progress" aria-hidden="true"><i></i></div></div></section>
+  <main id="atos">
+<section id="features" class="public-section"><div id="features-panel"></div></section><section id="neurons-orbit" aria-label="Neurônios do Steve"></section>
+    <!-- ATO 2 · A REALIDADE DURA -->
+    <section class="sec" id="ato2" aria-labelledby="t2">
+      <div class="in calc">
+        <div>
+          <span class="mono eyebrow">02 · A REALIDADE DURA</span>
+          <h2 id="t2">Quantas horas por semana a sua equipe passa repetindo tarefa na tela?</h2>
+          <label class="field"><span>Horas por semana <output class="val" id="hOut">12 h</output></span><input class="range" type="range" id="h" min="0" max="60" step="1" value="12" aria-label="Horas por semana"></label>
+          <label class="field"><span>E quanto vale uma hora dessas?</span><input class="inp" type="number" id="v" min="0" max="100000" step="1" placeholder="ex.: 12 h × R$ 40" inputmode="numeric" aria-label="Valor da hora em reais"></label>
+          <p class="err" id="calcErr" aria-live="polite"></p>
+        </div>
+        <div>
+          <p class="calc__out" aria-live="polite" id="calcOut">
+            <output><b id="oH">576</b> <span>horas por ano.</span></output>
+            <output><b id="oS">14,4</b> <span>semanas de trabalho.</span></output>
+            <output><b id="oR">R$ 23.040</b> <span>por ano em clique repetido.</span></output>
+          </p>
+          <p class="mono lower" style="margin-top:26px">Conta feita com os seus números, 48 semanas úteis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATO 3 · A MENTE -->
+    <section class="sec sec--alt" id="ato3" aria-labelledby="t3">
+      <div class="in mente memory-editorial">
+
+        <div class="txt stack">
+          <span class="mono eyebrow">03 · A MENTE</span>
+          <h2 id="t3">Antes de pensar, ele já sabe.</h2>
+          <p class="lead">Um reflexo treinado em decisões reais escolhe o óbvio em menos de um segundo. O modelo de linguagem só é chamado para o que exige raciocínio, com o contexto certo e nada além.</p>
+          <p class="mono">459 decisões reais · 95,7% de acerto na categoria de anúncio · 21/09/2026</p>
+          <p class="lead">E ele lembra: 368 mil pedaços de conhecimento da operação, achados em 153 milissegundos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATO 4 · AS MÃOS -->
+    <section class="sec" id="ato4" aria-labelledby="t4">
+      <div class="in">
+        <span class="mono eyebrow">04 · AS MÃOS</span>
+        <h2 id="t4">Ele usa o seu computador como você usa.</h2>
+        <p class="lead" style="margin-top:22px">Sem esperar integração, sem API: clica, digita e confere pela tela, em qualquer programa.</p>
+        <div class="maos">
+          <div class="p"><b>21,8 s</b><span class="mono">Voz → 144 na tela · 21/09/2026</span></div>
+          <div class="p"><b>268 ms</b><span class="mono">Clique por nome de elemento</span></div>
+          <div class="p"><b>1,1 s</b><span class="mono">Leitura da tela</span></div>
+        </div>
+        <!-- PENDENTE (dono): trechos de tela gravada entram aqui quando as gravações forem aprovadas (cursor visível, planos de 4 a 8 s). A nota interna saiu da página pública em 29/09. -->
+      </div>
+    </section>
+
+    <!-- ATO 5 · PEQUENO + GRANDE -->
+    <section class="sec sec--alt" id="ato5" aria-labelledby="t5">
+      <div class="in">
+        <span class="mono eyebrow">05 · PEQUENO + GRANDE</span>
+        <h2 id="t5">Modelo pequeno, confiável. Modelo grande, barato.</h2>
+        <p class="lead" style="margin-top:22px">O volume roda em modelo local, no computador da casa, sem cobrança por token. O difícil sobe para os maiores modelos do mundo. E chega lá com o contexto já mastigado.</p>
+        <p class="sr">Diagrama: reflexo local decide o óbvio em menos de 0,1 ms; a camada de reflexo em nuvem decide a opção fechada em cerca de 0,9 s; o modelo grande só raciocina o que exige pensar, com contexto enxuto.</p>
+        <div class="esc" id="esc" aria-hidden="true">
+          <svg viewBox="0 0 1000 260">
+            <path class="l" id="l1" d="M170 130 C 260 130, 300 130, 380 130"/>
+            <path class="l" id="l2" d="M540 130 C 630 130, 670 130, 750 130"/>
+            <rect class="n" id="n1" x="30" y="90" width="140" height="80" rx="2"/>
+            <text class="t" x="100" y="123" text-anchor="middle">REFLEXO</text><text x="100" y="147" text-anchor="middle">LOCAL · &lt;0,1 MS</text>
+            <rect class="n" id="n2" x="380" y="90" width="160" height="80" rx="2"/>
+            <text class="t" x="460" y="123" text-anchor="middle">SYSTEM ONE</text><text x="460" y="147" text-anchor="middle">~0,9 S</text>
+            <rect class="n roxo" id="n3" x="750" y="90" width="220" height="80" rx="2"/>
+            <text class="t" x="860" y="123" text-anchor="middle">MODELO GRANDE</text><text x="860" y="147" text-anchor="middle">SÓ O QUE EXIGE PENSAR</text>
+            <text x="100" y="215" text-anchor="middle">DECIDE O ÓBVIO</text>
+            <text x="460" y="215" text-anchor="middle">DECIDE A OPÇÃO FECHADA</text>
+            <text x="860" y="215" text-anchor="middle">RACIOCINA COM CONTEXTO ENXUTO</text>
+          </svg>
+        </div>
+        <p class="mono" style="margin-top:18px">Local · 59,2 tokens/s · 17/09/2026</p>
+      </div>
+    </section>
+
+    <!-- ATO 6 · O PLACAR -->
+    <section class="sec" id="ato6" aria-labelledby="t6">
+      <div class="in">
+        <div class="grid">
+          <div class="c7"><span class="mono eyebrow">06 · O PLACAR</span><h2 id="t6">O placar.</h2></div>
+          <div class="c5"><span class="graf graf--prata" data-tag="tag-1" data-texto="PROVA > PROMESSA" style="max-width:360px;margin-left:auto"></span></div>
+        </div>
+        <ul class="placar" id="placar"></ul>
+        <p class="lead" style="margin-top:32px">Tudo com data. Tudo medido por nós, com o método aberto.</p>
+        <div class="ctas"><a class="btn btn--ghost" href="provas/">Ver as provas</a></div>
+      </div>
+    </section>
+
+    <!-- ATO 7 · O FURO -->
+
+
+    <!-- ATO 8 · A VITRINE -->
+
+
+    <!-- ATO 9 · A OFERTA -->
+
+<section id="plans" class="public-section"><div id="public-pricing"></div></section>
+<section id="feedbacks" class="public-section"><div class="section-intro"><span class="mono">QUEM OPERA COM O STEVE</span><h2>Experiências reais.<br>Sem roteiro.</h2></div><div id="public-feedbacks"></div></section>
+  </main><section class="product-preview" aria-labelledby="preview-title"><div><span class="mono">PRÉVIA DA INTERFACE</span><h2 id="preview-title">Da intenção<br>ao seu espaço.</h2><p>Uma apresentação visual do aplicativo. Explore o que está disponível no piloto.</p><button type="button" id="play-product-preview" aria-controls="product-preview-stage">Reproduzir apresentação <span aria-hidden="true">↗</span></button><a href="app/">Abrir o aplicativo →</a></div><div id="product-preview-stage" class="preview-stage" aria-label="Prévia visual da interface Steve"><div class="preview-logo"><img src="assets/brand/steve-mark.svg?v=2" alt="Steve"/></div><img class="preview-app" src="assets/login-app-screen.png" alt="Tela inicial real do aplicativo Steve, com assistente e navegação lateral"/><span class="preview-label">INTERFACE REAL · PILOTO</span></div></section><section class="steve-faq" id="faq"><span class="mono">PERGUNTAS FREQUENTES</span><h2>Antes de começar.</h2><details><summary>O que já posso testar?</summary><p>O piloto prepara textos e rascunhos com contexto informado por você. Consulte o aplicativo para ver as funções disponíveis na sua conta.</p></details><details><summary>O Steve já publica e responde compradores sozinho?</summary><p>A publicação e o envio dependem das integrações de cada loja e das permissões habilitadas. Um rascunho preparado não significa que uma mensagem ou anúncio foi publicado.</p></details><details><summary>Posso conectar várias lojas?</summary><p>Essa é a direção do produto. A disponibilidade de cada plataforma e os limites da sua conta devem ser confirmados antes da contratação.</p></details><details><summary>Como funcionam planos e créditos?</summary><p>Os valores comerciais ainda são definidos conforme o escopo. Os créditos do piloto são de teste; não representam uma assinatura ativa.</p></details><details><summary>Posso revisar antes de executar?</summary><p>O fluxo prevê revisão humana e limites de autonomia. No piloto atual, a preparação de texto não publica em lojas nem envia mensagens a compradores.</p></details><details><summary>Onde vejo os aplicativos disponíveis?</summary><p>A área de downloads está em construção: por enquanto, nenhum aplicativo está disponível para baixar. Acesso ao site não equivale a uma licença comercial.</p></details></section><div id="beam-footer"></div>
+
+  <script src="vendor/scrub-engine.js"></script>
+  <script src="vendor/sound-engine.js"></script>
+  <script src="site.js"></script>
+
+  <script>
+    // Header and footer are mounted by the public component layer.
+    const A = 'assets/';
+    const S = k => ({ still: `${A}${k}.webp`, stillMobile: `${A}${k}-m.webp`, clip: null, clipMobile: null });
+    // Plano B do §05 ⑨: sem filme ainda, os 6 keyframes entram como pôsteres (o motor aceita seção sem clip). Quando os planos existirem, só preencher clip/clipMobile.
+    const CLIPS = { k0: 'k0', k1: 'k1', k2: 'k2', k3: 'k3', k4: 'k4', k5: 'k5' };
+
+    // ---- HUD (quadro 1600×900, âncora à direita como o vídeo) ----
+    const HUD = [
+      { ring: [1180, 450, 210], calls: [[1180, 240, 760, 200, 'MONÓLITO · 24/7'], [1300, 450, 1440, 520, 'S · CROMO'], [1180, 660, 760, 700, 'SEM API']] },
+      { ring: [1180, 450, 160], calls: [[1180, 290, 760, 250, 'A FRESTA'], [1180, 610, 760, 650, 'LUZ · 7A2BFF']] },
+      { ring: [1180, 450, 260], calls: [[1180, 190, 760, 150, 'CIDADE DE CIRCUITOS'], [1180, 710, 760, 750, 'UMA EMPRESA INTEIRA']] },
+      { ring: [1180, 450, 190], calls: [[1180, 260, 760, 220, 'MEMÓRIA · 368 MIL PEDAÇOS'], [1180, 640, 760, 680, 'BUSCA · 153 MS']] },
+      { ring: [1180, 450, 170], calls: [[1180, 280, 760, 240, 'MÃOS · CLIQUE 268 MS'], [1180, 620, 760, 660, 'OLHOS · 1,1 S']] },
+      { ring: [1180, 450, 230], calls: [[1180, 220, 760, 180, 'VOZ · 0,4 S'], [1180, 680, 760, 720, 'LAÇO']] },
+    ];
+    const NS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(NS, 'svg'); svg.setAttribute('viewBox', '0 0 1600 900'); document.getElementById('hud').appendChild(svg);
+    const mk = (t, a, p = svg) => { const e = document.createElementNS(NS, t); for (const k in a) e.setAttribute(k, a[k]); p.appendChild(e); return e; };
+    const groups = HUD.map(h => {
+      const g = mk('g', { opacity: 0 });
+      const [cx, cy, r] = h.ring, L = 2 * Math.PI * r;
+      const ring = mk('circle', { class: 'ring', cx, cy, r, 'stroke-dasharray': L, 'stroke-dashoffset': L, transform: `rotate(-90 ${cx} ${cy})` }, g);
+      const calls = h.calls.map(([x1, y1, x2, y2, label]) => {
+        const kx = x2 - 40 * Math.sign(x2 - x1); const d = `M${x1},${y1} L${kx},${y2} L${x2},${y2}`;
+        const path = mk('path', { class: 'lead', d }, g); const len = Math.hypot(kx - x1, y2 - y1) + Math.abs(x2 - kx);
+        path.setAttribute('stroke-dasharray', len); path.setAttribute('stroke-dashoffset', len);
+        const dot = mk('circle', { class: 'dot', cx: x1, cy: y1, r: 3 }, g);
+        const tx = mk('text', { x: x2 < x1 ? x2 - 10 : x2 + 10, y: y2 + 4, 'text-anchor': x2 < x1 ? 'end' : 'start' }, g); tx.textContent = label;
+        return { path, len, tx, dot };
+      });
+      return { g, ring, L, calls };
+    });
+    function fitHud() { const W = innerWidth, H = innerHeight, w = Math.max(W, H * 16 / 9), h = w * 9 / 16; Object.assign(svg.style, { width: w + 'px', height: h + 'px', left: (W - w) + 'px', top: ((H - h) * 0.45) + 'px' }); }
+    fitHud(); addEventListener('resize', fitHud);
+    const ease = t => t < 0 ? 0 : t > 1 ? 1 : t * t * (3 - 2 * t);
+    const graf1 = document.getElementById('graf1');
+    function drawHud(pr) {
+      groups.forEach((G, i) => {
+        const p = pr[i]; const out = i === groups.length - 1 ? 0.55 : 0.8;
+        const vis = p < 0 || p > 1 ? 0 : Math.min(ease((p - 0.05) / 0.2), 1 - ease((p - out) / 0.15));
+        G.g.setAttribute('opacity', vis.toFixed(3));
+        G.ring.setAttribute('stroke-dashoffset', (G.L * (1 - ease((p - 0.05) / 0.45))).toFixed(1));
+        G.calls.forEach((c, k) => { const q = ease((p - 0.2 - k * 0.08) / 0.2); c.path.setAttribute('stroke-dashoffset', (c.len * (1 - q)).toFixed(1)); c.tx.setAttribute('opacity', ease((p - 0.32 - k * 0.08) / 0.1).toFixed(2)); c.dot.setAttribute('opacity', q.toFixed(2)); });
+      });
+      const p0 = pr[0]; graf1.style.opacity = (p0 >= 0 && p0 <= 1) ? Math.min(ease((p0 - 0.02) / 0.15), 1 - ease((p0 - 0.7) / 0.15)).toFixed(2) : 0;
+    }
+
+    // ---- som: mapa HOME do §15 ----
+    const snd = STEVE.sound([
+      { s: 0, at: 0.06, fx: 'ring' }, { s: 0, at: 0.55, fx: 'riser' },
+      { s: 1, at: 0.30, fx: 'whoosh' },
+      { s: 2, at: 0.40, fx: 'core' },
+      { s: 3, at: 0.45, fx: 'crack' }, { s: 3, at: 0.50, fx: 'pop' },
+      { s: 4, at: 0.35, fx: 'sparkle' },
+      { s: 5, at: 0.20, fx: 'flare' }, { s: 5, at: 0.80, fx: 'thump' },
+    ]);
+
+    function mount(planos) {
+      const sec = (k, extra) => { const s = S(k); if (planos[k]) { s.clip = `${A}vid/${planos[k]}`; s.clipMobile = `${A}vid/${planos[k].replace('.mp4', '-m.mp4')}`; } return Object.assign({ id: k, accent: '#7A2BFF' }, s, extra); };
+      mountScrollWorld(document.getElementById('world'), {
+        hint: 'role para entrar', diveScroll: 1.6, crossfade: 0.08, atmosphere: false, nav: false, firstTitleTag: 'h1', holdLast: true,
+        sections: [
+          sec('k0', { label: 'Steve', scroll: 1.8, linger: 0.35, eyebrow: 'NASCIDO EM FRANCA-SP', title: 'Sua empresa inteira\ncabe num computador.', body: 'O Steve é um operador de negócio. Lembra, decide, enxerga a tela, clica e prova o que fez.', tags: [], cta: { primary: { label: 'Fazer o diagnóstico', href: 'diagnostico/' }, secondary: { label: 'Ver o que ele já fez', href: '#ato8' } } }),
+          sec('k1', { label: 'Entrar', eyebrow: '01 · A FRESTA', title: 'Por dentro.', body: 'Não é um chat que responde. É uma máquina que opera. Entre.', tags: [] }),
+          sec('k2', { label: 'A cidade', eyebrow: '02 · A CIDADE', title: 'Uma empresa inteira,\nem circuitos.', body: 'Atendimento, anúncio, pedido, nota, conteúdo. Tudo que tem tela e processador pode ser operado.', tags: [] }),
+          sec('k3', { label: 'Memória', eyebrow: '03 · A MEMÓRIA', title: 'Ele lembra.', body: '368.858 pedaços da operação, achados em 153 milissegundos.', tags: [] }),
+          sec('k4', { label: 'Mãos', eyebrow: '04 · AS MÃOS', title: 'Ele clica.', body: 'Por nome de elemento, em qualquer programa, sem API. Clique em 268 ms.', tags: [] }),
+          sec('k5', { label: 'Voz', scroll: 1.7, linger: 0.3, eyebrow: '05 · A VOZ', title: 'Ele prova\no que fez.', body: 'Cada execução deixa log, gravação e placar. Você confere.', tags: [], cta: { primary: { label: 'Fazer o diagnóstico', href: 'diagnostico/' }, secondary: { label: 'Ver as provas', href: 'provas/' } } }),
+        ],
+        connectors: [],
+        onFrame: (pr, y) => { drawHud(pr); STEVE.worldTail(pr, [document.getElementById('hud')]); snd && snd.frame(pr, y); },
+      });
+      // o motor injeta o CSS depois; o botão roxo do CTA é o único roxo da tela (o dot ativo é prata)
+    }
+
+    // ---- ATO 2: calculadora com os números do visitante ----
+    (function () {
+      const h = document.getElementById('h'), v = document.getElementById('v'), hOut = document.getElementById('hOut'), err = document.getElementById('calcErr');
+      const oH = document.getElementById('oH'), oS = document.getElementById('oS'), oR = document.getElementById('oR');
+      const fmt = n => n.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
+      let last = 0;
+      function calc() {
+        let hs = Number(h.value) || 0; err.textContent = '';
+        let val = Number(v.value);
+        if (val > 200 * 1000) { val = 200000; }
+        const H = hs * 48;
+        oH.textContent = fmt(H); oS.textContent = fmt(H / 40);
+        oR.textContent = val > 0 ? STEVE.brl(H * val) : '— ';
+        hOut.textContent = hs + ' h';
+        STEVE.ss.set('steve.horas', String(hs)); if (val > 0) STEVE.ss.set('steve.valorHora', String(val));
+        const now = Date.now(); if (now - last > 400) { last = now; STEVE.fire('type'); }
+      }
+      v.addEventListener('input', calc);
+      h.addEventListener('input', calc);
+      v.addEventListener('blur', () => { if (v.value === '') v.placeholder = 'ex.: 12 h × R$ 40'; });
+      const sh = STEVE.ss.get('steve.horas'), sv = STEVE.ss.get('steve.valorHora');
+      if (sh) h.value = Math.min(60, Number(sh)); if (sv) v.value = sv;
+      v.value = v.value || 40; calc();
+    })();
+
+    // ---- ATO 5: diagrama desenhado pela rolagem (local → reflexo → LLM) ----
+    (function () {
+      const el = document.getElementById('esc'); const l1 = el.querySelector('#l1'), l2 = el.querySelector('#l2');
+      [l1, l2].forEach(p => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = STEVE.REDUCE ? 0 : L; });
+      const ns = ['n1', 'n2', 'n3'].map(i => el.querySelector('#' + i)); if (STEVE.REDUCE) { ns.forEach(n => n.classList.add('on')); return; }
+      const run = () => { const b = el.getBoundingClientRect(); const p = Math.min(1, Math.max(0, (innerHeight * 0.9 - b.top) / (innerHeight * 0.6)));
+        ns[0].classList.toggle('on', p > 0.1); l1.style.strokeDashoffset = l1.getTotalLength() * (1 - Math.min(1, Math.max(0, (p - 0.15) / 0.3)));
+        ns[1].classList.toggle('on', p > 0.5); l2.style.strokeDashoffset = l2.getTotalLength() * (1 - Math.min(1, Math.max(0, (p - 0.55) / 0.3)));
+        ns[2].classList.toggle('on', p > 0.9); };
+      addEventListener('scroll', () => requestAnimationFrame(run), { passive: true }); run();
+    })();
+
+    // ---- ATO 6: placar de data/provas.json ----
+    STEVE.json('provas.json').then(p => {
+      const ul = document.getElementById('placar');
+      ul.innerHTML = p.resumo.slice(0, 6).map(r => `<li><b>${STEVE.esc(r.resultado)}</b><p>${STEVE.esc(r.tarefa)}</p><span class="mono">${STEVE.esc(r.amostra)} · ${STEVE.esc(r.data)}</span></li>`).join('');
+
+    }).catch(() => { document.getElementById('placar').innerHTML = '<li><p>Placar indisponível agora. <a href="provas/">Ver as provas</a>.</p></li>'; });
+
+    STEVE.graffiti();
+  </script>
+<script src="components/public-ui.bundle.js" defer></script><script type="module" src="components/public-site.js"></script><script type="module" src="components/home-organic.js"></script><script type="module" src="components/neural-light.js"></script><script src="components/product-preview.js" defer></script><script src="components/intro-video.js" defer></script></body>
+</html>
