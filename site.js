@@ -49,10 +49,11 @@
     snd = createScrollSound({ cues: cues || [], bed: Object.assign({ base: 49 }, bed || {}) });
     window.__snd = snd;
     const btn = document.createElement('button'); btn.id = 'som'; btn.type = 'button'; btn.setAttribute('aria-pressed', 'false');
-    btn.innerHTML = '<i aria-hidden="true"><b></b><b></b><b></b></i><span>ATIVAR SOM</span>';
+    btn.innerHTML = '<i aria-hidden="true"><b></b><b></b><b></b></i><span class="sr">Ativar som</span>';
+    btn.setAttribute('aria-label', 'Ativar som');
     // fica numa região própria no body: dentro do cabeçalho, o backdrop-filter dele prendia o botão fixo no topo
     const reg = document.createElement('div'); reg.setAttribute('role', 'region'); reg.setAttribute('aria-label', 'Som do site'); reg.appendChild(btn); document.body.appendChild(reg);
-    const set = on => { btn.setAttribute('aria-pressed', on); btn.querySelector('span').textContent = on ? 'SOM LIGADO' : 'ATIVAR SOM'; ss.set('steve.som', on ? '1' : '0'); };
+    const set = on => { btn.setAttribute('aria-pressed', on); btn.setAttribute('aria-label', on ? 'Desativar som' : 'Ativar som'); btn.querySelector('span').textContent = on ? 'Desativar som' : 'Ativar som'; ss.set('steve.som', on ? '1' : '0'); };
     btn.addEventListener('click', () => set(snd.toggle()));
     // estado pedido em outra página: liga no primeiro gesto do visitante (regra do navegador)
     if (ss.get('steve.som') === '1' && !REDUCE) {
@@ -230,13 +231,11 @@
   function footer() {
     const f = document.createElement('footer'); f.className = 'ft';
     f.innerHTML = `<div class="in">
-      <div><div class="mono" style="margin:0 0 12px">STEVE · AUTONOMOUS OPERATIONS</div><p>Operador de negócio. Lembra, decide, enxerga a tela, clica e prova o que fez.</p><p style="margin-top:10px">Nascidos em Franca-SP.</p></div>
+      <a class="ft__mark" href="${BASE}/" aria-label="Steve, voltar ao início"><img src="${BASE}/assets/brand/steve-mark.svg?v=2" alt="" width="28" height="30"></a>
       <nav aria-label="Rodapé"><a href="${BASE}/manifesto/">Quem somos</a><a href="${BASE}/provas/">Provas</a><a href="${BASE}/casos/">Casos e cenários</a><a href="${BASE}/servicos/">Serviços</a></nav>
       <nav aria-label="Rodapé, documentos"><a href="${BASE}/docs/">Documentação</a><a href="${BASE}/diagnostico/">Diagnóstico</a><a href="${BASE}/privacidade/">Privacidade</a><a href="${BASE}/termos/">Termos</a></nav>
-      <div class="ft__emp" id="ft-emp"></div>
     </div><span class="mono">NUNCA PROMETEMOS VENDA. PROMETEMOS EXECUÇÃO QUE VOCÊ CONFERE. · ${new Date().getFullYear()}</span>`;
     document.body.appendChild(f);
-    empresa().then(e => { const box = f.querySelector('#ft-emp'); if (box) box.innerHTML = linhasEmpresa(e || {}); });
   }
 
   window.STEVE = { esc, ss, json, brl, header, footer, sound, fire, decodeObserve, decodeNow, decodePrep, graffiti, worldTail, riscos, parallax, estimar, estimarLocal, montar, empresa, linhasEmpresa, REDUCE, BASE,
